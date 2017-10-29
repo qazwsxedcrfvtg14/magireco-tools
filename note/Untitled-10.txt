@@ -1,0 +1,246 @@
+.text:00824526 AB 6B                                   LDR             R3, [R5,#0x38]
+.text:00824528 06 2B                                   CMP             R3, #6
+.text:0082452A 6C D0                                   BEQ             loc_824606
+.text:0082452C 9F ED 5B 7A                             VLDR            S14, =51.0
+.text:00824530 00 22                                   MOVS            R2, #0
+.text:00824532 23 68                                   LDR             R3, [R4]
+.text:00824534 39 46                                   MOV             R1, R7
+.text:00824536 20 46                                   MOV             R0, R4
+.text:00824538 C4 F2 A0 12                             MOVT.W          R2, #0x41A0
+.text:0082453C DD ED 01 7A                             VLDR            S15, [SP,#0x2C+var_28]
+.text:00824540
+.text:00824540                         loc_824540                              ; CODE XREF: StoryMessageUnit::createTapAnime(void)+1D2j
+.text:00824540 DB 6C                                   LDR             R3, [R3,#0x4C]
+.text:00824542 04 92                                   STR             R2, [SP,#0x2C+var_1C]
+.text:00824544 77 EE C7 7A                             VSUB.F32        S15, S15, S14
+.text:00824548 CD ED 03 7A                             VSTR            S15, [SP,#0x2C+var_20]
+.text:0082454C 98 47                                   BLX             R3
+
+
+824528-823E94
+
+03 68 D3 F8 40 30 00 21 C3 F6 00 71 07 46 98 47
+
+LDR R3, [R0]
+LDR.W R3, [R3,#0x40]
+MOVS R1, 0
+MOVT R1, #0x3F00
+MOV R7, R0
+BLX R3
+B XXXXX
+
+82453A-823F3A
+03 68 D3 F8 
+40 30 00 21 
+C3 F6 00 71 
+82 46 98 47
+
+LDR R3, [R0]
+LDR.W R3, [R3,#0x40]
+MOVS R1, 0
+MOVT R1, #0x3F00
+MOV R10, R0
+BLX R3
+B XXXXX
+
+
+
+03 68 D3 F8 40 30 00 21
+43 F6 00 71 04 46 98 47
+
+LDR R2, [R0]
+LDR.W R2, [R2,#0x40]
+MOVS R1, 0
+MOV R1, #0x3F00
+MOV R4, R0
+BLX R2
+B XXXXX
+
+826F86-826EF2
+
+
+
+
+
+00826EEE
+
+.text:0082743A C4 F2 D8 11                             MOVT.W          R1, #0x41D8
+.text:008280FE 4F F0 84 43                             MOV.W           R3, #0x42000000
+
+
+
+EA 6D                                   LDR             R2, [R5,#0x5C]
+
+
+LDR R2, [R5,#0x5C]
+VMOV.F32 S14, #2.0
+VMOV.F32 S15, R2
+VMUL.F32 S15, S15,S14
+VMOV.F32 R2, S15
+
+EA 6D
+B0 EE 00 7A
+07 EE 90 2A
+67 EE 87 7A
+17 EE 90 2A
+
+8271CC-826EDE
+
+
+
+LDR R1, [R5,#0x24]
+VMOV.F32 S14, #2.0
+VMOV.F32 S15, R1
+VMUL.F32 S15, S15,S14
+VMOV.F32 R1, S15
+
+69 6A
+B0 EE 00 7A
+07 EE 90 1A
+67 EE 87 7A
+17 EE 90 1A
+
+827552-826F22
+
+
+827E00-826F80
+13 B0 BD E8 F0 8F 03 68 D3 F8 40 30 00 21 00 BF
+.text:00826F80 06 9B                                   LDR             R3, [SP,#0x4C+var_34]
+.text:00826F82 11 9A                                   LDR             R2, [SP,#0x4C+var_8]
+.text:00826F84 1B 68                                   LDR             R3, [R3]
+.text:00826F86 9A 42                                   CMP             R2, R3
+.text:00826F88 6E D1                                   BNE             loc_827068
+
+.text:00826F8A 13 B0                                   ADD             SP, SP, #0x4C
+.text:00826F8C BD E8 F0 8F                             POP.W           {R4-R11,PC}
+
+827388 - 826F8E
+
+0B B0 BD EC 06 8B BD E8 F0 8F 43 F6 00 71 04 46 98 47 00 BF
+.text:00827380 01 9B                                   LDR             R3, [SP,#0x68+var_64]
+.text:00827382 09 9A                                   LDR             R2, [SP,#0x68+var_44]
+.text:00827384 1B 68                                   LDR             R3, [R3]
+.text:00827386 9A 42                                   CMP             R2, R3
+.text:00827388 0C D1                                   BNE             loc_8273A4
+
+.text:0082738A 0B B0                                   ADD             SP, SP, #0x2C
+.text:0082738C BD EC 06 8B                             VPOP            {D8-D10}
+.text:00827390 BD E8 F0 8F                             POP.W           {R4-R11,PC}
+
+827390-826EF2
+
+
+
+
+
+
+8277B2-8271D2
+
+06 B0 BD EC 02 8B 70 BD EA 6D B0 EE 00 7A 00 BF
+.text:008271CC 05 9A                                   LDR             R2, [SP,#0x30+var_1C]
+.text:008271CE 2B 68                                   LDR             R3, [R5]
+.text:008271D0 9A 42                                   CMP             R2, R3
+.text:008271D2 03 D1                                   BNE             loc_8271DC
+
+.text:008271D4 06 B0                                   ADD             SP, SP, #0x18
+.text:008271D6 BD EC 02 8B                             VPOP            {D8}
+.text:008271DA 70 BD                                   POP             {R4-R6,PC}
+
+8277AC-8271D2
+
+08 B0 BD E8 F0 87 07 EE 90 2A 67 EE 87 7A 00 BF
+.text:008277AC 07 9A                                   LDR             R2, [SP,#0x40+var_24]
+.text:008277AE 33 68                                   LDR             R3, [R6]
+.text:008277B0 9A 42                                   CMP             R2, R3
+.text:008277B2 40 F0 ED 80                             BNE.W           loc_827990
+
+.text:008277B6 08 B0                                   ADD             SP, SP, #0x20
+.text:008277B8 BD E8 F0 87                             POP.W           {R4-R10,PC}
+
+827A9C-8277B2
+
+05 B0 F0 BD 17 EE 90 2A 00 BF 00 BF
+.text:00827A9C 03 9A                                   LDR             R2, [SP,#0x28+var_1C]
+.text:00827A9E 3B 68                                   LDR             R3, [R7]
+.text:00827AA0 9A 42                                   CMP             R2, R3
+.text:00827AA2 13 D1                                   BNE             loc_827ACC
+
+.text:00827AA4 05 B0                                   ADD             SP, SP, #0x14
+.text:00827AA6 F0 BD                                   POP             {R4-R7,PC}
+
+
+827AA2-826EDE
+
+
+
+
+827C82-827552
+
+0A B0 BD E8 F0 81 69 6A B0 EE 00 7A 00 BF
+.text:00827552 09 9A                                   LDR             R2, [SP,#0x40+var_1C]
+.text:00827554 2B 68                                   LDR             R3, [R5]
+.text:00827556 9A 42                                   CMP             R2, R3
+.text:00827558 29 D1                                   BNE             loc_8275AE
+
+.text:0082755A 0A B0                                   ADD             SP, SP, #0x28
+.text:0082755C BD E8 F0 81                             POP.W           {R4-R8,PC}
+
+827C82-82755E
+
+05 B0 BD EC 02 8B BD E8 F0 83 07 EE 90 1A 67 EE 87 7A 00 BF
+.text:00827C82 03 9A                                   LDR             R2, [SP,#0x38+var_2C]
+.text:00827C84 D8 F8 00 30                             LDR.W           R3, [R8]
+.text:00827C88 9A 42                                   CMP             R2, R3
+.text:00827C8A 21 D1                                   BNE             loc_827CD0
+
+.text:00827C8C 05 B0                                   ADD             SP, SP, #0x14
+.text:00827C8E BD EC 02 8B                             VPOP            {D8}
+.text:00827C92 BD E8 F0 83                             POP.W           {R4-R9,PC}
+
+827E00-827C94
+
+0B B0 BD E8 F0 83 17 EE 90 1A 00 BF 00 BF
+.text:00827DFA 09 9A                                   LDR             R2, [SP,#0x48+var_24]
+.text:00827DFC 33 68                                   LDR             R3, [R6]
+.text:00827DFE 9A 42                                   CMP             R2, R3
+.text:00827E00 2E D1                                   BNE             loc_827E60
+
+.text:00827E02 0B B0                                   ADD             SP, SP, #0x2C
+.text:00827E04 BD E8 F0 83                             POP.W           {R4-R9,PC}
+
+827E02-826F22
+
+
+
+
+
+
+
+
+.text:00827684 05 9A                                   LDR             R2, [SP,#0x30+var_1C]
+.text:00827686 33 68                                   LDR             R3, [R6]
+.text:00827688 9A 42                                   CMP             R2, R3
+.text:0082768A 01 D1                                   BNE             loc_827690
+
+.text:0082768C 07 B0                                   ADD             SP, SP, #0x1C
+.text:0082768E F0 BD                                   POP             {R4-R7,PC}
+
+
+
+
+
+
+
+
+.text:00827B32 03 9A                                   LDR             R2, [SP,#0x28+var_1C]
+.text:00827B34 3B 68                                   LDR             R3, [R7]
+.text:00827B36 9A 42                                   CMP             R2, R3
+.text:00827B38 13 D1                                   BNE             loc_827B62
+
+.text:00827B3A 05 B0                                   ADD             SP, SP, #0x14
+.text:00827B3C F0 BD                                   POP             {R4-R7,PC}
+
+
+
+
+283 byte

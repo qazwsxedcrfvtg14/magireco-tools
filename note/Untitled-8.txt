@@ -1,0 +1,52 @@
+00 21
+C3 F6 00 71
+D8 F8 00 30
+
+D3 F8 AC 30
+80 46
+98 47
+
+
+MOVS R1, 0
+MOVT R1, #0x3F00
+MOV R0, R8
+MOV R0, R8
+B XXXXX
+
+MOVS R1, 0
+MOVT R1, #0x3F00
+D8 F8 00 30                             LDR.W           R3, [R8]
+D3 F8 40 30                             LDR.W           R3, [R3,#0x40]
+MOV R8, R0
+98 47                                   BLX             R3
+B XXXXX
+
+
+
+8215B8-821202
+821910-821202
+2B B0 BD EC 04 8B BD E8 F0 8F 00 21 C3 F6 00 71 D8 F8 00 30 F9 E7
+0F 9B 29 9A 1B 68 9A 42 40 F0 B6 80 2B B0 BD EC 04 8B BD E8 F0 8F                             POP.W           {R4-R11,PC}
+
+.text:008215B2                         loc_8215B2                              ; CODE XREF: StoryGroupSelectUnit::setSelectBranch(std::list<CommandValueSelectGroup::Data,std::allocator<CommandValueSelectGroup::Data>> const&)+3Ej
+.text:008215B2                                                                 ; StoryGroupSelectUnit::setSelectBranch(std::list<CommandValueSelectGroup::Data,std::allocator<CommandValueSelectGroup::Data>> const&)+84j ...
+.text:008215B2 0F 9B                                   LDR             R3, [SP,#0xE0+var_A4]
+.text:008215B4 29 9A                                   LDR             R2, [SP,#0xE0+var_3C]
+.text:008215B6 1B 68                                   LDR             R3, [R3]
+.text:008215B8 9A 42                                   CMP             R2, R3
+.text:008215BA 40 F0 B6 80                             BNE.W           loc_82172A
+.text:008215BE 2B B0                                   ADD             SP, SP, #0xAC
+.text:008215C0 BD EC 04 8B                             VPOP            {D8-D9}
+.text:008215C4 BD E8 F0 8F                             POP.W           {R4-R11,PC}
+
+06 B0 BD E8 F0 87 D3 F8 40 30 80 46 98 47 FA E7
+05 9A 3B 68 9A 42 40 F0 C5 80 06 B0 BD E8 F0 87
+
+
+
+.text:00821904 05 9A                                   LDR             R2, [SP,#0x38+var_24]
+.text:00821906 3B 68                                   LDR             R3, [R7]
+.text:00821908 9A 42                                   CMP             R2, R3
+.text:0082190A 40 F0 C5 80                             BNE.W           loc_821A98
+.text:0082190E 06 B0                                   ADD             SP, SP, #0x18
+.text:00821910 BD E8 F0 87                             POP.W           {R4-R10,PC}

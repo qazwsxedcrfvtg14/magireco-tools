@@ -1,0 +1,3 @@
+  ; StoryGroupSelectUnit::setSelectBranch(std::list<CommandValueSelectGroup::Data, std::allocator<CommandValueSelectGroup::Data>> const&)
+.text:008210E4                                         EXPORT _ZN20StoryGroupSelectUnit15setSelectBranchERKSt4listIN23CommandValueSelectGroup4DataESaIS2_EE
+.text:008210E4                         _ZN20StoryGroupSelectUnit15setSelectBranchERKSt4listIN23CommandValueSelectGroup4DataESaIS2_EE

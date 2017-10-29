@@ -1,0 +1,685 @@
+.text:00825FEC                         ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)
+.text:00825FEC                                         EXPORT _ZN16StoryMessageUnit17createMessageAreaENS_11TextPosType13TextPosType__E
+.text:00825FEC                         _ZN16StoryMessageUnit17createMessageAreaENS_11TextPosType13TextPosType__E
+.text:00825FEC                                                                 ; CODE XREF: StoryMessageUnit::textStart(StoryMessageUnit::TextPosType::TextPosType__)+2Cp
+.text:00825FEC
+.text:00825FEC                         var_68          = -0x68
+.text:00825FEC                         var_64          = -0x64
+.text:00825FEC                         var_60          = -0x60
+.text:00825FEC                         var_5C          = -0x5C
+.text:00825FEC                         var_58          = -0x58
+.text:00825FEC                         var_54          = -0x54
+.text:00825FEC                         var_4C          = -0x4C
+.text:00825FEC                         var_48          = -0x48
+.text:00825FEC                         var_44          = -0x44
+.text:00825FEC                         var_40          = -0x40
+.text:00825FEC                         var_3C          = -0x3C
+.text:00825FEC                         var_38          = -0x38
+.text:00825FEC                         var_34          = -0x34
+.text:00825FEC
+.text:00825FEC 2D E9 F0 4F                             PUSH.W          {R4-R11,LR}
+.text:00825FF0 04 46                                   MOV             R4, R0
+.text:00825FF2 2D ED 02 8B                             VPUSH           {D8}
+.text:00825FF6 0E 46                                   MOV             R6, R1
+.text:00825FF8 DF F8 4C 85                             LDR.W           R8, =(_GLOBAL_OFFSET_TABLE_ - 0x826004)
+.text:00825FFC DF F8 4C 35                             LDR.W           R3, =(__stack_chk_guard_ptr - 0x15DD974)
+.text:00826000 F8 44                                   ADD             R8, PC ; _GLOBAL_OFFSET_TABLE_
+.text:00826002 8F B0                                   SUB             SP, SP, #0x3C
+.text:00826004 02 91                                   STR             R1, [SP,#0x68+var_60]
+.text:00826006 58 F8 03 30                             LDR.W           R3, [R8,R3] ; __stack_chk_guard
+.text:0082600A 05 93                                   STR             R3, [SP,#0x68+var_54]
+.text:0082600C 1B 68                                   LDR             R3, [R3]
+.text:0082600E 0D 93                                   STR             R3, [SP,#0x68+var_34]
+.text:00826010 25 F3 A2 EF                             BLX             _ZN7cocos2d6Sprite6createEv ; cocos2d::Sprite::create(void)
+.text:00826014 05 46                                   MOV             R5, R0
+.text:00826016 A0 6B                                   LDR             R0, [R4,#0x38]
+.text:00826018 06 28                                   CMP             R0, #6
+.text:0082601A 07 D0                                   BEQ             loc_82602C
+.text:0082601C 01 2E                                   CMP             R6, #1
+.text:0082601E 00 F0 A4 81                             BEQ.W           loc_82636A
+.text:00826022 C0 F0 98 81                             BCC.W           loc_826356
+.text:00826026 02 2E                                   CMP             R6, #2
+.text:00826028 00 F0 8A 81                             BEQ.W           loc_826340
+.text:0082602C
+.text:0082602C                         loc_82602C                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+2Ej
+.text:0082602C                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+368j ...
+.text:0082602C DF F8 20 35                             LDR.W           R3, =(_ZN5story4unit7message14textBgFileNameE_ptr - 0x15DD974)
+.text:00826030 B6 EE 00 8A                             VMOV.F32        S16, #0.5
+.text:00826034 0B AE                                   ADD             R6, SP, #0x68+var_3C
+.text:00826036 58 F8 03 30                             LDR.W           R3, [R8,R3] ; _ZN5story4unit7message14textBgFileNameE_ptr ; story::unit::message::textBgFileName
+.text:0082603A 03 EB 80 00                             ADD.W           R0, R3, R0,LSL#2
+.text:0082603E 25 F3 0A EF                             BLX             _ZN7cocos2d6Sprite25createWithSpriteFrameNameERKSs ; cocos2d::Sprite::createWithSpriteFrameName(std::string const&)
+.text:00826042 94 ED 09 7A                             VLDR            S14, [R4,#0x24]
+.text:00826046 2B 68                                   LDR             R3, [R5]
+.text:00826048 31 46                                   MOV             R1, R6
+.text:0082604A D4 ED 1A 7A                             VLDR            S15, [R4,#0x68]
+.text:0082604E DB 6C                                   LDR             R3, [R3,#0x4C]
+.text:00826050 27 EE 08 7A                             VMUL.F32        S14, S14, S16
+.text:00826054 F8 EE E7 7A                             VCVT.F32.S32    S15, S15
+.text:00826058 8D ED 0B 7A                             VSTR            S14, [SP,#0x68+var_3C]
+.text:0082605C CD ED 0C 7A                             VSTR            S15, [SP,#0x68+var_38]
+.text:00826060 03 90                                   STR             R0, [SP,#0x68+var_5C]
+.text:00826062 28 46                                   MOV             R0, R5
+.text:00826064 98 47                                   BLX             R3
+.text:00826066 A3 6B                                   LDR             R3, [R4,#0x38]
+.text:00826068 06 2B                                   CMP             R3, #6
+.text:0082606A 00 F0 88 81                             BEQ.W           loc_82637E
+.text:0082606E
+.text:0082606E                         loc_82606E                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3B8j
+.text:0082606E 0D F1 28 09                             ADD.W           R9, SP, #0x68+var_40
+.text:00826072 0D F1 1C 0B                             ADD.W           R11, SP, #0x68+var_4C
+.text:00826076 DF F8 DC 14                             LDR.W           R1, =(byte_144BF43 - 0x826086)
+.text:0082607A 0D F1 20 0A                             ADD.W           R10, SP, #0x68+var_48
+.text:0082607E 5A 46                                   MOV             R2, R11
+.text:00826080 48 46                                   MOV             R0, R9
+.text:00826082 79 44                                   ADD             R1, PC
+.text:00826084 4B F3 FE D9                             BL.W            sub_1371484
+.text:00826088 DF F8 CC 14                             LDR.W           R1, =(aFontsMbm_20160 - 0x826094)
+.text:0082608C 52 46                                   MOV             R2, R10
+.text:0082608E 30 46                                   MOV             R0, R6
+.text:00826090 79 44                                   ADD             R1, PC  ; "fonts/mbm_20160902.ttf"
+.text:00826092 4B F3 F7 D9                             BL.W            sub_1371484
+.text:00826096 DF F8 C4 34                             LDR.W           R3, =(_ZN7cocos2d4Size4ZEROE_ptr - 0x15DD974)
+.text:0082609A 00 22                                   MOVS            R2, #0
+.text:0082609C 00 27                                   MOVS            R7, #0
+.text:0082609E 48 46                                   MOV             R0, R9
+.text:008260A0 31 46                                   MOV             R1, R6
+.text:008260A2 C4 F2 D8 12                             MOVT.W          R2, #0x41D8
+.text:008260A6 58 F8 03 30                             LDR.W           R3, [R8,R3] ; _ZN7cocos2d4Size4ZEROE_ptr ; cocos2d::Size::ZERO
+.text:008260AA 00 97                                   STR             R7, [SP,#0x68+var_68]
+.text:008260AC 01 97                                   STR             R7, [SP,#0x68+var_64]
+.text:008260AE 04 93                                   STR             R3, [SP,#0x68+var_58]
+.text:008260B0 F0 F2 6C ED                             BLX             _ZN7cocos2d5Label13createWithTTFERKSsS2_fRKNS_4SizeENS_14TextHAlignmentENS_14TextVAlignmentE ; cocos2d::Label::createWithTTF(std::string const&,std::string const&,float,cocos2d::Size const&,cocos2d::TextHAlignment,cocos2d::TextVAlignment)
+.text:008260B4 DF F8 A8 34                             LDR.W           R3, =(off_15D54F4 - 0x15DD974)
+.text:008260B8 07 46                                   MOV             R7, R0
+.text:008260BA 0B 98                                   LDR             R0, [SP,#0x68+var_3C]
+.text:008260BC 58 F8 03 80                             LDR.W           R8, [R8,R3] ; unk_2619DDC
+.text:008260C0 0C 38                                   SUBS            R0, #0xC
+.text:008260C2 40 45                                   CMP             R0, R8
+.text:008260C4 40 F0 7B 81                             BNE.W           loc_8263BE
+.text:008260C8
+.text:008260C8                         loc_8260C8                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3D8j
+.text:008260C8 0A 98                                   LDR             R0, [SP,#0x68+var_40]
+.text:008260CA 0C 38                                   SUBS            R0, #0xC
+.text:008260CC 40 45                                   CMP             R0, R8
+.text:008260CE 40 F0 6E 81                             BNE.W           loc_8263AE
+.text:008260D2
+.text:008260D2                         loc_8260D2                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3C8j
+.text:008260D2 3B 68                                   LDR             R3, [R7]
+.text:008260D4 4F F0 00 0E                             MOV.W           LR, #0
+.text:008260D8 4F F0 7E 52                             MOV.W           R2, #0x3F800000
+.text:008260DC 38 46                                   MOV             R0, R7
+.text:008260DE 31 46                                   MOV             R1, R6
+.text:008260E0 D3 F8 9C 30                             LDR.W           R3, [R3,#0x9C]
+.text:008260E4 CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:008260E8 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:008260EA 98 47                                   BLX             R3
+.text:008260EC 00 22                                   MOVS            R2, #0
+.text:008260EE 38 46                                   MOV             R0, R7
+.text:008260F0 D7 F8 F0 12                             LDR.W           R1, [R7,#0x2F0]
+.text:008260F4 EC F2 B0 E9                             BLX             _ZN7cocos2d5Label12setAlignmentENS_14TextHAlignmentENS_14TextVAlignmentE ; cocos2d::Label::setAlignment(cocos2d::TextHAlignment,cocos2d::TextVAlignment)
+.text:008260F8 00 21                                   MOVS            R1, #0
+.text:008260FA 38 46                                   MOV             R0, R7  ; this
+.text:008260FC C4 F2 18 21                             MOVT.W          R1, #0x4218
+.text:00826100 ED F2 EA E8                             BLX             _ZN7cocos2d5Label13setLineHeightEf ; cocos2d::Label::setLineHeight(float)
+.text:00826104 00 21                                   MOVS            R1, #0
+.text:00826106 38 46                                   MOV             R0, R7  ; this
+.text:00826108 C4 F2 CD 31                             MOVT.W          R1, #0x43CD
+.text:0082610C EC F2 BC E9                             BLX             _ZN7cocos2d5Label15setMaxLineWidthEf ; cocos2d::Label::setMaxLineWidth(float)
+.text:00826110 2B 68                                   LDR             R3, [R5]
+.text:00826112 28 46                                   MOV             R0, R5
+.text:00826114 03 99                                   LDR             R1, [SP,#0x68+var_5C]
+.text:00826116 D3 F8 F8 30                             LDR.W           R3, [R3,#0xF8]
+.text:0082611A 98 47                                   BLX             R3
+.text:0082611C 2B 68                                   LDR             R3, [R5]
+.text:0082611E 28 46                                   MOV             R0, R5
+.text:00826120 39 46                                   MOV             R1, R7
+.text:00826122 01 22                                   MOVS            R2, #1
+.text:00826124 D3 F8 FC 30                             LDR.W           R3, [R3,#0xFC]
+.text:00826128 98 47                                   BLX             R3
+.text:0082612A DF F8 38 14                             LDR.W           R1, =(byte_144BF43 - 0x826136)
+.text:0082612E 5A 46                                   MOV             R2, R11
+.text:00826130 48 46                                   MOV             R0, R9
+.text:00826132 79 44                                   ADD             R1, PC
+.text:00826134 4B F3 A6 D9                             BL.W            sub_1371484
+.text:00826138 DF F8 2C 14                             LDR.W           R1, =(aFontsMbm_20160 - 0x826144)
+.text:0082613C 30 46                                   MOV             R0, R6
+.text:0082613E 52 46                                   MOV             R2, R10
+.text:00826140 79 44                                   ADD             R1, PC  ; "fonts/mbm_20160902.ttf"
+.text:00826142 4B F3 9F D9                             BL.W            sub_1371484
+.text:00826146 00 22                                   MOVS            R2, #0
+.text:00826148 04 9B                                   LDR             R3, [SP,#0x68+var_58]
+.text:0082614A 00 92                                   STR             R2, [SP,#0x68+var_68]
+.text:0082614C 48 46                                   MOV             R0, R9
+.text:0082614E 01 92                                   STR             R2, [SP,#0x68+var_64]
+.text:00826150 31 46                                   MOV             R1, R6
+.text:00826152 4F F0 83 42                             MOV.W           R2, #0x41800000
+.text:00826156 F0 F2 1A ED                             BLX             _ZN7cocos2d5Label13createWithTTFERKSsS2_fRKNS_4SizeENS_14TextHAlignmentENS_14TextVAlignmentE ; cocos2d::Label::createWithTTF(std::string const&,std::string const&,float,cocos2d::Size const&,cocos2d::TextHAlignment,cocos2d::TextVAlignment)
+.text:0082615A 82 46                                   MOV             R10, R0
+.text:0082615C 0B 98                                   LDR             R0, [SP,#0x68+var_3C]
+.text:0082615E 0C 38                                   SUBS            R0, #0xC
+.text:00826160 40 45                                   CMP             R0, R8
+.text:00826162 40 F0 28 81                             BNE.W           loc_8263B6
+.text:00826166
+.text:00826166                         loc_826166                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3D0j
+.text:00826166 0A 98                                   LDR             R0, [SP,#0x68+var_40]
+.text:00826168 0C 38                                   SUBS            R0, #0xC
+.text:0082616A 40 45                                   CMP             R0, R8
+.text:0082616C 40 F0 1B 81                             BNE.W           loc_8263A6
+.text:00826170
+.text:00826170                         loc_826170                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3C0j
+.text:00826170 00 21                                   MOVS            R1, #0
+.text:00826172 50 46                                   MOV             R0, R10 ; this
+.text:00826174 C4 F2 C8 11                             MOVT.W          R1, #0x41C8
+.text:00826178 ED F2 AE E8                             BLX             _ZN7cocos2d5Label13setLineHeightEf ; cocos2d::Label::setLineHeight(float)
+.text:0082617C 02 9B                                   LDR             R3, [SP,#0x68+var_60]
+.text:0082617E 03 2B                                   CMP             R3, #3  ; switch 4 cases
+.text:00826180 2F D8                                   BHI             def_826182 ; jumptable 00826182 default case
+.text:00826182 DF E8 03 F0                             TBB.W           [PC,R3] ; switch jump
+.text:00826182                         ; ---------------------------------------------------------------------------
+.text:00826186 B9                      jpt_826182      DCB 0xB9                ; jump table for switch statement
+.text:00826187 02                                      DCB 2
+.text:00826188 74                                      DCB 0x74
+.text:00826189 5F                                      DCB 0x5F
+.text:0082618A                         ; ---------------------------------------------------------------------------
+.text:0082618A
+.text:0082618A                         loc_82618A                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+196j
+.text:0082618A DA F8 00 30                             LDR.W           R3, [R10] ; jumptable 00826182 case 1
+.text:0082618E 4F F0 7C 52                             MOV.W           R2, #0x3F000000
+.text:00826192 4F F0 00 0E                             MOV.W           LR, #0
+.text:00826196 50 46                                   MOV             R0, R10
+.text:00826198 31 46                                   MOV             R1, R6
+.text:0082619A D3 F8 9C 30                             LDR.W           R3, [R3,#0x9C]
+.text:0082619E CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:008261A2 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:008261A4 98 47                                   BLX             R3
+.text:008261A6 DA F8 00 30                             LDR.W           R3, [R10]
+.text:008261AA 4F F0 00 0E                             MOV.W           LR, #0
+.text:008261AE 00 22                                   MOVS            R2, #0
+.text:008261B0 CC F2 5C 2E                             MOVT.W          LR, #0xC25C
+.text:008261B4 50 46                                   MOV             R0, R10
+.text:008261B6 DB 6C                                   LDR             R3, [R3,#0x4C]
+.text:008261B8 31 46                                   MOV             R1, R6
+.text:008261BA C4 F2 64 22                             MOVT.W          R2, #0x4264
+.text:008261BE CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:008261C2 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:008261C4 98 47                                   BLX             R3
+.text:008261C6 DA F8 00 30                             LDR.W           R3, [R10]
+.text:008261CA 04 F1 74 01                             ADD.W           R1, R4, #0x74
+.text:008261CE 50 46                                   MOV             R0, R10
+.text:008261D0
+.text:008261D0                         loc_8261D0                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+352j
+.text:008261D0 D3 F8 B4 32                             LDR.W           R3, [R3,#0x2B4]
+.text:008261D4 98 47                                   BLX             R3
+.text:008261D6 50 46                                   MOV             R0, R10
+.text:008261D8 00 21                                   MOVS            R1, #0
+.text:008261DA DA F8 F4 22                             LDR.W           R2, [R10,#0x2F4]
+.text:008261DE EC F2 3C E9                             BLX             _ZN7cocos2d5Label12setAlignmentENS_14TextHAlignmentENS_14TextVAlignmentE ; cocos2d::Label::setAlignment(cocos2d::TextHAlignment,cocos2d::TextVAlignment)
+.text:008261E2
+.text:008261E2                         def_826182                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+194j
+.text:008261E2                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+278j ...
+.text:008261E2 A3 6B                                   LDR             R3, [R4,#0x38] ; jumptable 00826182 default case
+.text:008261E4 06 2B                                   CMP             R3, #6
+.text:008261E6 71 D0                                   BEQ             loc_8262CC
+.text:008261E8
+.text:008261E8                         loc_8261E8                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+2DEj
+.text:008261E8                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+300j ...
+.text:008261E8 2B 68                                   LDR             R3, [R5]
+.text:008261EA 28 46                                   MOV             R0, R5
+.text:008261EC 51 46                                   MOV             R1, R10
+.text:008261EE 01 22                                   MOVS            R2, #1
+.text:008261F0 D3 F8 FC 30                             LDR.W           R3, [R3,#0xFC]
+.text:008261F4 98 47                                   BLX             R3
+.text:008261F6 E0 6A                                   LDR             R0, [R4,#0x2C]
+.text:008261F8 64 22                                   MOVS            R2, #0x64
+.text:008261FA 29 46                                   MOV             R1, R5
+.text:008261FC 03 68                                   LDR             R3, [R0]
+.text:008261FE D3 F8 FC 30                             LDR.W           R3, [R3,#0xFC]
+.text:00826202 98 47                                   BLX             R3
+.text:00826204 63 6C                                   LDR             R3, [R4,#0x44]
+.text:00826206 A2 6C                                   LDR             R2, [R4,#0x48]
+.text:00826208 93 42                                   CMP             R3, R2
+.text:0082620A 00 F0 E6 80                             BEQ.W           loc_8263DA
+.text:0082620E B3 F1 14 02                             SUBS.W          R2, R3, #0x14
+.text:00826212 0B D0                                   BEQ             loc_82622C
+.text:00826214 03 9A                                   LDR             R2, [SP,#0x68+var_5C]
+.text:00826216 43 F8 14 5C                             STR.W           R5, [R3,#-0x14]
+.text:0082621A 43 F8 0C 7C                             STR.W           R7, [R3,#-0xC]
+.text:0082621E 43 F8 10 2C                             STR.W           R2, [R3,#-0x10]
+.text:00826222 02 9A                                   LDR             R2, [SP,#0x68+var_60]
+.text:00826224 03 E9 04 04                             STMDB.W         R3, {R2,R10}
+.text:00826228 62 6C                                   LDR             R2, [R4,#0x44]
+.text:0082622A 14 3A                                   SUBS            R2, #0x14
+.text:0082622C
+.text:0082622C                         loc_82622C                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+226j
+.text:0082622C 62 64                                   STR             R2, [R4,#0x44]
+.text:0082622E
+.text:0082622E                         loc_82622E                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+41Ej
+.text:0082622E                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+43Aj
+.text:0082622E 05 9B                                   LDR             R3, [SP,#0x68+var_54]
+.text:00826230 0D 9A                                   LDR             R2, [SP,#0x68+var_34]
+.text:00826232 1B 68                                   LDR             R3, [R3]
+.text:00826234 9A 42                                   CMP             R2, R3
+.text:00826236 40 F0 5C 81                             BNE.W           loc_8264F2
+.text:0082623A 0F B0                                   ADD             SP, SP, #0x3C
+.text:0082623C BD EC 02 8B                             VPOP            {D8}
+.text:00826240 BD E8 F0 8F                             POP.W           {R4-R11,PC}
+.text:00826244                         ; ---------------------------------------------------------------------------
+.text:00826244
+.text:00826244                         loc_826244                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+196j
+.text:00826244 DA F8 00 30                             LDR.W           R3, [R10] ; jumptable 00826182 case 3
+.text:00826248 30 46                                   MOV             R0, R6
+.text:0082624A C8 49                                   LDR             R1, =(byte_144BF43 - 0x826252)
+.text:0082624C 09 AA                                   ADD             R2, SP, #0x68+var_44
+.text:0082624E 79 44                                   ADD             R1, PC
+.text:00826250 D3 F8 B4 B2                             LDR.W           R11, [R3,#0x2B4]
+.text:00826254 4B F3 16 D9                             BL.W            sub_1371484
+.text:00826258 50 46                                   MOV             R0, R10
+.text:0082625A 31 46                                   MOV             R1, R6
+.text:0082625C D8 47                                   BLX             R11
+.text:0082625E 0B 98                                   LDR             R0, [SP,#0x68+var_3C]
+.text:00826260 0C 38                                   SUBS            R0, #0xC
+.text:00826262 40 45                                   CMP             R0, R8
+.text:00826264 BD D0                                   BEQ             def_826182 ; jumptable 00826182 default case
+.text:00826266 49 46                                   MOV             R1, R9
+.text:00826268 FF F7 2C FD                             BL              sub_825CC4
+.text:0082626C B9 E7                                   B               def_826182 ; jumptable 00826182 default case
+.text:0082626E                         ; ---------------------------------------------------------------------------
+.text:0082626E
+.text:0082626E                         loc_82626E                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+196j
+.text:0082626E DA F8 00 30                             LDR.W           R3, [R10] ; jumptable 00826182 case 2
+.text:00826272 4F F0 7E 5E                             MOV.W           LR, #0x3F800000
+.text:00826276 4F F0 7C 52                             MOV.W           R2, #0x3F000000
+.text:0082627A 50 46                                   MOV             R0, R10
+.text:0082627C 31 46                                   MOV             R1, R6
+.text:0082627E D3 F8 9C 30                             LDR.W           R3, [R3,#0x9C]
+.text:00826282 CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:00826286 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:00826288 98 47                                   BLX             R3
+.text:0082628A DA F8 00 30                             LDR.W           R3, [R10]
+.text:0082628E 4F F0 00 0E                             MOV.W           LR, #0
+.text:00826292 00 22                                   MOVS            R2, #0
+.text:00826294 C4 F2 57 3E                             MOVT.W          LR, #0x4357
+.text:00826298 C4 F2 64 22                             MOVT.W          R2, #0x4264
+.text:0082629C DB 6C                                   LDR             R3, [R3,#0x4C]
+.text:0082629E 50 46                                   MOV             R0, R10
+.text:008262A0 CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:008262A4 31 46                                   MOV             R1, R6
+.text:008262A6 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:008262A8 98 47                                   BLX             R3
+.text:008262AA DA F8 00 30                             LDR.W           R3, [R10]
+.text:008262AE 50 46                                   MOV             R0, R10
+.text:008262B0 04 F1 78 01                             ADD.W           R1, R4, #0x78
+.text:008262B4 D3 F8 B4 32                             LDR.W           R3, [R3,#0x2B4]
+.text:008262B8 98 47                                   BLX             R3
+.text:008262BA 50 46                                   MOV             R0, R10
+.text:008262BC 02 21                                   MOVS            R1, #2
+.text:008262BE DA F8 F4 22                             LDR.W           R2, [R10,#0x2F4]
+.text:008262C2 EC F2 CA E8                             BLX             _ZN7cocos2d5Label12setAlignmentENS_14TextHAlignmentENS_14TextVAlignmentE ; cocos2d::Label::setAlignment(cocos2d::TextHAlignment,cocos2d::TextVAlignment)
+.text:008262C6 A3 6B                                   LDR             R3, [R4,#0x38]
+.text:008262C8 06 2B                                   CMP             R3, #6
+.text:008262CA 8D D1                                   BNE             loc_8261E8
+.text:008262CC
+.text:008262CC                         loc_8262CC                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+1FAj
+.text:008262CC DA F8 00 30                             LDR.W           R3, [R10]
+.text:008262D0 30 46                                   MOV             R0, R6
+.text:008262D2 A7 49                                   LDR             R1, =(byte_144BF43 - 0x8262DA)
+.text:008262D4 09 AA                                   ADD             R2, SP, #0x68+var_44
+.text:008262D6 79 44                                   ADD             R1, PC
+.text:008262D8 D3 F8 B4 B2                             LDR.W           R11, [R3,#0x2B4]
+.text:008262DC 4B F3 D2 D8                             BL.W            sub_1371484
+.text:008262E0 50 46                                   MOV             R0, R10
+.text:008262E2 31 46                                   MOV             R1, R6
+.text:008262E4 D8 47                                   BLX             R11
+.text:008262E6 0B 98                                   LDR             R0, [SP,#0x68+var_3C]
+.text:008262E8 0C 38                                   SUBS            R0, #0xC
+.text:008262EA 40 45                                   CMP             R0, R8
+.text:008262EC 3F F4 7C AF                             BEQ.W           loc_8261E8
+.text:008262F0 49 46                                   MOV             R1, R9
+.text:008262F2 FF F7 E7 FC                             BL              sub_825CC4
+.text:008262F6 77 E7                                   B               loc_8261E8
+.text:008262F8                         ; ---------------------------------------------------------------------------
+.text:008262F8
+.text:008262F8                         loc_8262F8                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+196j
+.text:008262F8 DA F8 00 30                             LDR.W           R3, [R10] ; jumptable 00826182 case 0
+.text:008262FC 4F F0 7C 52                             MOV.W           R2, #0x3F000000
+.text:00826300 4F F0 00 0E                             MOV.W           LR, #0
+.text:00826304 50 46                                   MOV             R0, R10
+.text:00826306 31 46                                   MOV             R1, R6
+.text:00826308 D3 F8 9C 30                             LDR.W           R3, [R3,#0x9C]
+.text:0082630C CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:00826310 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:00826312 98 47                                   BLX             R3
+.text:00826314 DA F8 00 30                             LDR.W           R3, [R10]
+.text:00826318 4F F0 00 0E                             MOV.W           LR, #0
+.text:0082631C 00 22                                   MOVS            R2, #0
+.text:0082631E CC F2 57 3E                             MOVT.W          LR, #0xC357
+.text:00826322 50 46                                   MOV             R0, R10
+.text:00826324 DB 6C                                   LDR             R3, [R3,#0x4C]
+.text:00826326 31 46                                   MOV             R1, R6
+.text:00826328 C4 F2 64 22                             MOVT.W          R2, #0x4264
+.text:0082632C CD F8 2C E0                             STR.W           LR, [SP,#0x68+var_3C]
+.text:00826330 0C 92                                   STR             R2, [SP,#0x68+var_38]
+.text:00826332 98 47                                   BLX             R3
+.text:00826334 DA F8 00 30                             LDR.W           R3, [R10]
+.text:00826338 50 46                                   MOV             R0, R10
+.text:0082633A 04 F1 70 01                             ADD.W           R1, R4, #0x70
+.text:0082633E 47 E7                                   B               loc_8261D0
+.text:00826340                         ; ---------------------------------------------------------------------------
+.text:00826340
+.text:00826340                         loc_826340                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3Cj
+.text:00826340 8C 49                                   LDR             R1, =(byte_144BF43 - 0x82634A)
+.text:00826342 04 F1 78 00                             ADD.W           R0, R4, #0x78
+.text:00826346 79 44                                   ADD             R1, PC
+.text:00826348 49 F3 CA DE                             BL.W            sub_13700E0
+.text:0082634C 00 28                                   CMP             R0, #0
+.text:0082634E 40 D1                                   BNE             loc_8263D2
+.text:00826350 03 20                                   MOVS            R0, #3
+.text:00826352 A0 63                                   STR             R0, [R4,#0x38]
+.text:00826354 6A E6                                   B               loc_82602C
+.text:00826356                         ; ---------------------------------------------------------------------------
+.text:00826356
+.text:00826356                         loc_826356                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+36j
+.text:00826356 88 49                                   LDR             R1, =(byte_144BF43 - 0x826360)
+.text:00826358 04 F1 70 00                             ADD.W           R0, R4, #0x70
+.text:0082635C 79 44                                   ADD             R1, PC
+.text:0082635E 49 F3 BF DE                             BL.W            sub_13700E0
+.text:00826362 80 BB                                   CBNZ            R0, loc_8263C6
+.text:00826364 01 20                                   MOVS            R0, #1
+.text:00826366 A0 63                                   STR             R0, [R4,#0x38]
+.text:00826368 60 E6                                   B               loc_82602C
+.text:0082636A                         ; ---------------------------------------------------------------------------
+.text:0082636A
+.text:0082636A                         loc_82636A                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+32j
+.text:0082636A 84 49                                   LDR             R1, =(byte_144BF43 - 0x826374)
+.text:0082636C 04 F1 74 00                             ADD.W           R0, R4, #0x74
+.text:00826370 79 44                                   ADD             R1, PC
+.text:00826372 49 F3 B5 DE                             BL.W            sub_13700E0
+.text:00826376 48 BB                                   CBNZ            R0, loc_8263CC
+.text:00826378 05 20                                   MOVS            R0, #5
+.text:0082637A A0 63                                   STR             R0, [R4,#0x38]
+.text:0082637C 56 E6                                   B               loc_82602C
+.text:0082637E                         ; ---------------------------------------------------------------------------
+.text:0082637E
+.text:0082637E                         loc_82637E                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+7Ej
+.text:0082637E D4 ED 09 7A                             VLDR            S15, [R4,#0x24]
+.text:00826382 28 46                                   MOV             R0, R5
+.text:00826384 A3 6E                                   LDR             R3, [R4,#0x68]
+.text:00826386 31 46                                   MOV             R1, R6
+.text:00826388 2A 68                                   LDR             R2, [R5]
+.text:0082638A 0A 3B                                   SUBS            R3, #0xA
+.text:0082638C 27 EE 88 8A                             VMUL.F32        S16, S15, S16
+.text:00826390 07 EE 90 3A                             VMOV            S15, R3
+.text:00826394 D2 6C                                   LDR             R2, [R2,#0x4C]
+.text:00826396 F8 EE E7 7A                             VCVT.F32.S32    S15, S15
+.text:0082639A 8D ED 0B 8A                             VSTR            S16, [SP,#0x68+var_3C]
+.text:0082639E CD ED 0C 7A                             VSTR            S15, [SP,#0x68+var_38]
+.text:008263A2 90 47                                   BLX             R2
+.text:008263A4 63 E6                                   B               loc_82606E
+.text:008263A6                         ; ---------------------------------------------------------------------------
+.text:008263A6
+.text:008263A6                         loc_8263A6                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+180j
+.text:008263A6 31 46                                   MOV             R1, R6
+.text:008263A8 FF F7 8C FC                             BL              sub_825CC4
+.text:008263AC E0 E6                                   B               loc_826170
+.text:008263AE                         ; ---------------------------------------------------------------------------
+.text:008263AE
+.text:008263AE                         loc_8263AE                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+E2j
+.text:008263AE 31 46                                   MOV             R1, R6
+.text:008263B0 FF F7 88 FC                             BL              sub_825CC4
+.text:008263B4 8D E6                                   B               loc_8260D2
+.text:008263B6                         ; ---------------------------------------------------------------------------
+.text:008263B6
+.text:008263B6                         loc_8263B6                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+176j
+.text:008263B6 09 A9                                   ADD             R1, SP, #0x68+var_44
+.text:008263B8 FF F7 84 FC                             BL              sub_825CC4
+.text:008263BC D3 E6                                   B               loc_826166
+.text:008263BE                         ; ---------------------------------------------------------------------------
+.text:008263BE
+.text:008263BE                         loc_8263BE                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+D8j
+.text:008263BE 09 A9                                   ADD             R1, SP, #0x68+var_44
+.text:008263C0 FF F7 80 FC                             BL              sub_825CC4
+.text:008263C4 80 E6                                   B               loc_8260C8
+.text:008263C6                         ; ---------------------------------------------------------------------------
+.text:008263C6
+.text:008263C6                         loc_8263C6                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+376j
+.text:008263C6 00 20                                   MOVS            R0, #0
+.text:008263C8 A0 63                                   STR             R0, [R4,#0x38]
+.text:008263CA 2F E6                                   B               loc_82602C
+.text:008263CC                         ; ---------------------------------------------------------------------------
+.text:008263CC
+.text:008263CC                         loc_8263CC                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+38Aj
+.text:008263CC 04 20                                   MOVS            R0, #4
+.text:008263CE A0 63                                   STR             R0, [R4,#0x38]
+.text:008263D0 2C E6                                   B               loc_82602C
+.text:008263D2                         ; ---------------------------------------------------------------------------
+.text:008263D2
+.text:008263D2                         loc_8263D2                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+362j
+.text:008263D2 02 9B                                   LDR             R3, [SP,#0x68+var_60]
+.text:008263D4 A3 63                                   STR             R3, [R4,#0x38]
+.text:008263D6 18 46                                   MOV             R0, R3
+.text:008263D8 28 E6                                   B               loc_82602C
+.text:008263DA                         ; ---------------------------------------------------------------------------
+.text:008263DA
+.text:008263DA                         loc_8263DA                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+21Ej
+.text:008263DA 26 6D                                   LDR             R6, [R4,#0x50]
+.text:008263DC E3 6B                                   LDR             R3, [R4,#0x3C]
+.text:008263DE F2 1A                                   SUBS            R2, R6, R3
+.text:008263E0 92 08                                   LSRS            R2, R2, #2
+.text:008263E2 21 D0                                   BEQ             loc_826428
+.text:008263E4
+.text:008263E4                         loc_8263E4                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+49Ej
+.text:008263E4 4F F4 FA 70                             MOV.W           R0, #0x1F4 ; unsigned int
+.text:008263E8 17 F3 82 DD                             BL.W            _Znwj   ; operator new(uint)
+.text:008263EC 46 F8 04 0C                             STR.W           R0, [R6,#-4]
+.text:008263F0 23 6D                                   LDR             R3, [R4,#0x50]
+.text:008263F2 1A 1F                                   SUBS            R2, R3, #4
+.text:008263F4 22 65                                   STR             R2, [R4,#0x50]
+.text:008263F6 53 F8 04 3C                             LDR.W           R3, [R3,#-4]
+.text:008263FA 03 F5 F0 72                             ADD.W           R2, R3, #0x1E0
+.text:008263FE 03 F5 FA 71                             ADD.W           R1, R3, #0x1F4
+.text:00826402 A3 64                                   STR             R3, [R4,#0x48]
+.text:00826404 62 64                                   STR             R2, [R4,#0x44]
+.text:00826406 E1 64                                   STR             R1, [R4,#0x4C]
+.text:00826408 00 2A                                   CMP             R2, #0
+.text:0082640A 3F F4 10 AF                             BEQ.W           loc_82622E
+.text:0082640E 03 9A                                   LDR             R2, [SP,#0x68+var_5C]
+.text:00826410 C3 F8 E0 51                             STR.W           R5, [R3,#0x1E0]
+.text:00826414 C3 F8 E8 71                             STR.W           R7, [R3,#0x1E8]
+.text:00826418 C3 F8 E4 21                             STR.W           R2, [R3,#0x1E4]
+.text:0082641C 02 9A                                   LDR             R2, [SP,#0x68+var_60]
+.text:0082641E C3 F8 F0 A1                             STR.W           R10, [R3,#0x1F0]
+.text:00826422 C3 F8 EC 21                             STR.W           R2, [R3,#0x1EC]
+.text:00826426 02 E7                                   B               loc_82622E
+.text:00826428                         ; ---------------------------------------------------------------------------
+.text:00826428
+.text:00826428                         loc_826428                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+3F6j
+.text:00826428 22 6E                                   LDR             R2, [R4,#0x60]
+.text:0082642A 21 6C                                   LDR             R1, [R4,#0x40]
+.text:0082642C C6 EB 02 09                             RSB.W           R9, R6, R2
+.text:00826430 4F EA A9 09                             MOV.W           R9, R9,ASR#2
+.text:00826434 09 F1 01 09                             ADD.W           R9, R9, #1
+.text:00826438 09 F1 01 08                             ADD.W           R8, R9, #1
+.text:0082643C B1 EB 48 0F                             CMP.W           R1, R8,LSL#1
+.text:00826440 24 D9                                   BLS             loc_82648C
+.text:00826442 C8 EB 01 08                             RSB.W           R8, R8, R1
+.text:00826446 04 32                                   ADDS            R2, #4
+.text:00826448 92 1B                                   SUBS            R2, R2, R6 ; n
+.text:0082644A 4F EA 58 08                             MOV.W           R8, R8,LSR#1
+.text:0082644E 03 EB 88 03                             ADD.W           R3, R3, R8,LSL#2
+.text:00826452 03 F1 04 08                             ADD.W           R8, R3, #4
+.text:00826456 46 45                                   CMP             R6, R8
+.text:00826458 37 D9                                   BLS             loc_8264CA
+.text:0082645A 93 08                                   LSRS            R3, R2, #2
+.text:0082645C 44 D1                                   BNE             loc_8264E8
+.text:0082645E
+.text:0082645E                         loc_82645E                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+4DCj
+.text:0082645E                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+4E0j ...
+.text:0082645E C4 F8 50 80                             STR.W           R8, [R4,#0x50]
+.text:00826462 09 F1 80 49                             ADD.W           R9, R9, #0x40000000
+.text:00826466 D8 F8 00 30                             LDR.W           R3, [R8]
+.text:0082646A 09 F1 FF 39                             ADD.W           R9, R9, #0xFFFFFFFF
+.text:0082646E 46 46                                   MOV             R6, R8
+.text:00826470 03 F5 FA 72                             ADD.W           R2, R3, #0x1F4
+.text:00826474 08 EB 89 01                             ADD.W           R1, R8, R9,LSL#2
+.text:00826478 E2 64                                   STR             R2, [R4,#0x4C]
+.text:0082647A 21 66                                   STR             R1, [R4,#0x60]
+.text:0082647C A3 64                                   STR             R3, [R4,#0x48]
+.text:0082647E 58 F8 29 30                             LDR.W           R3, [R8,R9,LSL#2]
+.text:00826482 03 F5 FA 72                             ADD.W           R2, R3, #0x1F4
+.text:00826486 E2 65                                   STR             R2, [R4,#0x5C]
+.text:00826488 A3 65                                   STR             R3, [R4,#0x58]
+.text:0082648A AB E7                                   B               loc_8263E4
+.text:0082648C                         ; ---------------------------------------------------------------------------
+.text:0082648C
+.text:0082648C                         loc_82648C                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+454j
+.text:0082648C 31 B3                                   CBZ             R1, loc_8264DC
+.text:0082648E 49 00                                   LSLS            R1, R1, #1
+.text:00826490 8E 1C                                   ADDS            R6, R1, #2
+.text:00826492 B6 F1 80 4F                             CMP.W           R6, #0x40000000
+.text:00826496 47 D2                                   BCS             loc_826528
+.text:00826498
+.text:00826498                         loc_826498                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+4F2j
+.text:00826498 B0 00                                   LSLS            R0, R6, #2
+.text:0082649A C8 EB 06 08                             RSB.W           R8, R8, R6
+.text:0082649E 17 F3 27 DD                             BL.W            _Znwj   ; operator new(uint)
+.text:008264A2 23 6E                                   LDR             R3, [R4,#0x60]
+.text:008264A4 21 6D                                   LDR             R1, [R4,#0x50] ; src
+.text:008264A6 4F EA 58 08                             MOV.W           R8, R8,LSR#1
+.text:008264AA 04 33                                   ADDS            R3, #4
+.text:008264AC 5A 1A                                   SUBS            R2, R3, R1 ; n
+.text:008264AE 93 08                                   LSRS            R3, R2, #2
+.text:008264B0 00 EB 88 08                             ADD.W           R8, R0, R8,LSL#2
+.text:008264B4 83 46                                   MOV             R11, R0
+.text:008264B6 08 F1 04 08                             ADD.W           R8, R8, #4
+.text:008264BA 11 D1                                   BNE             loc_8264E0
+.text:008264BC
+.text:008264BC                         loc_8264BC                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+4FAj
+.text:008264BC E0 6B                                   LDR             R0, [R4,#0x3C] ; ptr
+.text:008264BE 16 F3 BD DA                             BL.W            _ZdlPv  ; operator delete(void *)
+.text:008264C2 C4 F8 3C B0                             STR.W           R11, [R4,#0x3C]
+.text:008264C6 26 64                                   STR             R6, [R4,#0x40]
+.text:008264C8 C9 E7                                   B               loc_82645E
+.text:008264CA                         ; ---------------------------------------------------------------------------
+.text:008264CA
+.text:008264CA                         loc_8264CA                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+46Cj
+.text:008264CA 93 08                                   LSRS            R3, R2, #2
+.text:008264CC C7 D0                                   BEQ             loc_82645E
+.text:008264CE C2 EB 89 00                             RSB.W           R0, R2, R9,LSL#2
+.text:008264D2 31 46                                   MOV             R1, R6  ; src
+.text:008264D4 40 44                                   ADD             R0, R8  ; dest
+.text:008264D6 44 F5 98 EA                             BLX             memmove
+.text:008264DA C0 E7                                   B               loc_82645E
+.text:008264DC                         ; ---------------------------------------------------------------------------
+.text:008264DC
+.text:008264DC                         loc_8264DC                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__):loc_82648Cj
+.text:008264DC 03 26                                   MOVS            R6, #3
+.text:008264DE DB E7                                   B               loc_826498
+.text:008264E0                         ; ---------------------------------------------------------------------------
+.text:008264E0
+.text:008264E0                         loc_8264E0                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+4CEj
+.text:008264E0 40 46                                   MOV             R0, R8  ; dest
+.text:008264E2 44 F5 92 EA                             BLX             memmove
+.text:008264E6 E9 E7                                   B               loc_8264BC
+.text:008264E8                         ; ---------------------------------------------------------------------------
+.text:008264E8
+.text:008264E8                         loc_8264E8                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+470j
+.text:008264E8 31 46                                   MOV             R1, R6  ; src
+.text:008264EA 40 46                                   MOV             R0, R8  ; dest
+.text:008264EC 44 F5 8C EA                             BLX             memmove
+.text:008264F0 B5 E7                                   B               loc_82645E
+.text:008264F2                         ; ---------------------------------------------------------------------------
+.text:008264F2
+.text:008264F2                         loc_8264F2                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+24Aj
+.text:008264F2 44 F5 CA E9                             BLX             __stack_chk_fail
+.text:008264F6                         ; ---------------------------------------------------------------------------
+.text:008264F6 1A 4B                                   LDR             R3, =(off_15D54F4 - 0x15DD974)
+.text:008264F8 0B 98                                   LDR             R0, [SP,#0x68+var_3C]
+.text:008264FA 58 F8 03 80                             LDR.W           R8, [R8,R3] ; unk_2619DDC
+.text:008264FE 0C 38                                   SUBS            R0, #0xC
+.text:00826500 40 45                                   CMP             R0, R8
+.text:00826502 0C D1                                   BNE             loc_82651E
+.text:00826504
+.text:00826504                         loc_826504                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+530j
+.text:00826504                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+538j ...
+.text:00826504 0A 98                                   LDR             R0, [SP,#0x68+var_40]
+.text:00826506 0C 38                                   SUBS            R0, #0xC
+.text:00826508 40 45                                   CMP             R0, R8
+.text:0082650A 02 D0                                   BEQ             loc_826512
+.text:0082650C 09 A9                                   ADD             R1, SP, #0x68+var_44
+.text:0082650E FF F7 D9 FB                             BL              sub_825CC4
+.text:00826512
+.text:00826512                         loc_826512                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+51Ej
+.text:00826512                                                                 ; .text:0082653Aj ...
+.text:00826512 16 F3 69 DC                             BL.W            __cxa_end_cleanup
+.text:00826516                         ; ---------------------------------------------------------------------------
+.text:00826516 0B 98                                   LDR             R0, [SP,#0x68+var_3C]
+.text:00826518 0C 38                                   SUBS            R0, #0xC
+.text:0082651A 40 45                                   CMP             R0, R8
+.text:0082651C F2 D0                                   BEQ             loc_826504
+.text:0082651E
+.text:0082651E                         loc_82651E                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+516j
+.text:0082651E 09 A9                                   ADD             R1, SP, #0x68+var_44
+.text:00826520 FF F7 D0 FB                             BL              sub_825CC4
+.text:00826524 EE E7                                   B               loc_826504
+.text:00826526                         ; ---------------------------------------------------------------------------
+.text:00826526 ED E7                                   B               loc_826504
+.text:00826528                         ; ---------------------------------------------------------------------------
+.text:00826528
+.text:00826528                         loc_826528                              ; CODE XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+4AAj
+.text:00826528 48 F3 CC D9                             BL.W            sub_136E8C4
+.text:0082652C                         ; ---------------------------------------------------------------------------
+.text:0082652C 0C 4B                                   LDR             R3, =(off_15D54F4 - 0x15DD974)
+.text:0082652E 58 F8 03 80                             LDR.W           R8, [R8,R3] ; unk_2619DDC
+.text:00826532 E7 E7                                   B               loc_826504
+.text:00826532                         ; End of function StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)
+.text:00826532
+.text:00826534                         ; ---------------------------------------------------------------------------
+.text:00826534
+.text:00826534                         loc_826534                              ; CODE XREF: .text:00826544j
+.text:00826534 0B 98                                   LDR             R0, [SP,#0x2C]
+.text:00826536 0C 38                                   SUBS            R0, #0xC
+.text:00826538 40 45                                   CMP             R0, R8
+.text:0082653A EA D0                                   BEQ             loc_826512
+.text:0082653C 49 46                                   MOV             R1, R9
+.text:0082653E FF F7 C1 FB                             BL              sub_825CC4
+.text:00826542 E6 E7                                   B               loc_826512
+.text:00826544                         ; ---------------------------------------------------------------------------
+.text:00826544 F6 E7                                   B               loc_826534
+.text:00826544                         ; ---------------------------------------------------------------------------
+.text:00826546 00 BF                                   ALIGN 4
+.text:00826548 70 79 DB 00             off_826548      DCD _GLOBAL_OFFSET_TABLE_ - 0x826004
+.text:00826548                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+Cr
+.text:0082654C 6C 7B FF FF             off_82654C      DCD __stack_chk_guard_ptr - 0x15DD974
+.text:0082654C                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+10r
+.text:00826550 40 9F FF FF             off_826550      DCD _ZN5story4unit7message14textBgFileNameE_ptr - 0x15DD974
+.text:00826550                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__):loc_82602Cr
+.text:00826554 BD 5E C2 00             off_826554      DCD byte_144BF43 - 0x826086
+.text:00826554                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+8Ar
+.text:00826558 9C 04 C3 00             off_826558      DCD aFontsMbm_20160 - 0x826094
+.text:00826558                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+9Cr
+.text:00826558                                                                 ; "fonts/mbm_20160902.ttf"
+.text:0082655C 8C 7D FF FF             off_82655C      DCD _ZN7cocos2d4Size4ZEROE_ptr - 0x15DD974
+.text:0082655C                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+AAr
+.text:00826560 80 7B FF FF             off_826560      DCD off_15D54F4 - 0x15DD974
+.text:00826560                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+C8r
+.text:00826560                                                                 ; StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+50Ar ...
+.text:00826564 0D 5E C2 00             off_826564      DCD byte_144BF43 - 0x826136
+.text:00826564                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+13Er
+.text:00826568 EC 03 C3 00             off_826568      DCD aFontsMbm_20160 - 0x826144
+.text:00826568                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+14Cr
+.text:00826568                                                                 ; "fonts/mbm_20160902.ttf"
+.text:0082656C F1 5C C2 00             off_82656C      DCD byte_144BF43 - 0x826252
+.text:0082656C                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+25Er
+.text:00826570 69 5C C2 00             off_826570      DCD byte_144BF43 - 0x8262DA
+.text:00826570                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__)+2E6r
+.text:00826574 F9 5B C2 00             off_826574      DCD byte_144BF43 - 0x82634A
+.text:00826574                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__):loc_826340r
+.text:00826578 E3 5B C2 00             off_826578      DCD byte_144BF43 - 0x826360
+.text:00826578                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__):loc_826356r
+.text:0082657C CF 5B C2 00             off_82657C      DCD byte_144BF43 - 0x826374
+.text:0082657C                                                                 ; DATA XREF: StoryMessageUnit::createMessageArea(StoryMessageUnit::TextPosType::TextPosType__):loc_82636Ar
+.text:00826580
+.text:00826580                         ; =============== S U B R O U T I N E =======================================
+.text:00826580
+.text:00826580

@@ -1,0 +1,397 @@
+MAX_LIMIT_VALUE 1000000000
+MAX_DAMAGE 10000000
+MAX_COUNT 9999
+ARENA_DAMAGE_MAGIA_RATE 0.5
+ARENA_DAMAGE_DISC_RATE 0.7
+ARENA_ATTACKED_MP_GAIN_RATE 60
+QUEST_ATTACKED_MP_GAIN_RATE 40
+ARENA_ATTACK_MP_GAIN_RATE 1.5
+QUEST_ATTACK_MP_GAIN_RATE  1
+SKILL_DAMAGED_SP_CHARGE_COUNT 100
+UNIT_DAMAGE_MIN 500
+UNIT_DAMAGE_UP_MAX 3000
+UNIT_DAMAGE_RANDOM_RATE 0.05
+UNIT_DAMAGE_DEFENCE_RATE 0.3333333
+UNIT_DAMAGE_ATTACK_RATE  1
+UNIT_DEBUFF_MAX -950
+MAX_POISON_DAMAGE 10000
+MAX_POISON_EFFECT 300
+UNIT_DYING_RATE 0.2
+MP_BONUS_ALL_GAIN 200
+MP_BONUS_ACCELE_COMBO 0 
+MP_BONUS_1ST_ACCELE 30
+COMBO_CHARGE_BONUS 2
+MAX_CHARGE 20
+DISC_LEADER_RATE 40
+MAGIA_COMBO_BONUS  0.1
+ARENA_CHARGE_DAMAGE_BONUS 0.9
+RANGE_DAMAGE_RATE 0.05
+RANGE_DAMAGE_MAX  1
+ATTACK_ALIGNMENT_ADD_RATE 1.2
+
+劇情
+    v7==true
+        R3=QbUnit::getHpMax*QbArtBase::getEffect
+
+S16 AttackPower = Attack * UNIT_DAMAGE_ATTACK_RATE
+
+S15 Defense
+
+S14 UNIT_DAMAGE_DEFENCE_RATE
+
+S16-=S14*S15
+
+
+S16 Attack-Defense/3
+
+
+
+S20=1.0
+
+S14=UNIT_DAMAGE_RANDOM_RATE
+
+S17=UNIT_DAMAGE_MIN
+
+S21=S14+S14
+
+R0=S21
+
+S19=S14+S20
+
+R18=Alignment_Rate
+if R18 != 1
+    R18*=ATTACK_ALIGNMENT_ADD_RATE
+S16=max(S17,S16)*(1+rand(-UNIT_DAMAGE_RANDOM_RATE~UNIT_DAMAGE_RANDOM_RATE))
+*R18*DiscDamageRate
+
+S15=DiscDamageRate
+
+
+3FC00000
+3F000000
+40400000
+
+OrderBonusBlastDiscTable
+1
+1.1
+1.2
+
+OrderBonusMpTable
+1
+1.5
+2
+
+AvatarBaseScaleTable
+1.2
+1.2
+
+AttackAlignmentRateTable
+1.5
+0.5
+3
+0.5
+1.5
+0.5
+3
+0.5
+
+
+MaxBuffQuestTable = MaxBuffArenaTableE
+2000
+2000
+2000
+2000
+2000
+2000
+2000
+2000
+2000
+2000
+
+ChargeRateTable
+1.4
+1.1
+1.3
+1.8
+1.2
+1.6
+2.2
+1.3
+1.9
+2.6
+1.4
+2.2
+3.0
+1.5
+2.5
+3.3
+1.6
+2.7
+3.6
+1.7
+2.9
+3.9
+1.8
+3.1
+4.2
+1.9
+3.3
+4.5
+2.0
+3.5
+4.8
+2.1
+3.9
+5.1
+2.2
+4.3
+5.4
+2.3
+4.7
+5.7
+2.4
+5.1
+6.0
+2.5
+5.5
+6.4
+2.6
+6.0
+6.8
+2.7
+6.5
+7.2
+2.8
+7.0
+7.6
+2.9
+7.5
+8.0
+3.0
+8.0
+
+EnemyHitRateBaseTable
+100
+0
+0
+70
+30
+0
+60
+30
+10
+100
+0
+0
+80
+20
+0
+10
+80
+10
+100
+0
+0
+30
+70
+0
+10
+30
+60
+
+DiscBonusMpTable
+0
+0
+0
+0
+70
+20
+
+
+競技場=>index+4
+同人=>index+2
+
+A
+1.0 1.2
+1.0 1.2
+
+B-Quest
+0.6 0.9
+0.9 1.2
+
+B-Arena
+0.7 1.0
+1.0 1.3
+
+C
+0.8 1.2
+0.8 1.2
+
+
+DiscMpUpDamageTable
+1
+1
+1.2
+1.2
+1
+1
+1,2
+1.2
+
+DiscRangeDamageTable
+0.6
+0.9
+0.9
+1.2
+0.7
+1
+1
+1.3
+
+DiscChargeDamageTable
+0.8
+0.8
+1.2
+1.2
+0.8
+0.8
+1.2
+1.2
+
+
+
+UNIT_DAMAGE_MIN=500
+UNIT_DAMAGE_RANDOM_RATE=0.05
+max(Attack-Defense/3,UNIT_DAMAGE_MIN)*(1+rand(-UNIT_DAMAGE_RANDOM_RATE,UNIT_DAMAGE_RANDOM_RATE))
+
+:00789B94    
+
+char *__fastcall QbCamp::applyChain(QbCamp *this, QbTicketAttack *a2)   
+void *******__fastcall QbCamp::checkChainCombo(QbCamp *this)
+
+3155
+3155
+
+A 5191
+C 4210
+B 3577
+
+BA
+4979
+5982
+//6787
+
+
+這遊戲很多數值都是查表的
+首先給出以下幾個表
+A
+1.0 1.2
+1.0 1.2
+B-Quest
+0.6 0.9
+0.9 1.2
+B-Arena
+0.7 1.0
+1.0 1.3
+C
+0.8 1.2
+0.8 1.2
+
+格式:
+招式
+原始 Puella
+三連 三連+Puella
+Puella 就是同魔法少女
+
+上面是每個招式的原始倍率
+
+接下來是傷害公式
+原始傷害 = Max(攻擊-防禦/3,500)*隨機(0.95,1.05)*屬性*招式原始倍率*Blast位置加成(1.0,1.1,1.2)
+一堆雜七雜八計算(大部分跟記憶卡有關)
+如果是競技場放大招，傷害*0.5
+如果是競技場放一般招式，傷害*0.7
+檢查傷害是否超過上限(10000000)
+如果是A或B且前面有Charge的情況，傷害乘上下表的倍數
+Charge1 1.4
+Charge2 1.8
+Charge3 2.2
+Charge4 2.6
+Charge5 3.0
+Charge6 3.3
+Charge7 3.6
+Charge8 3.9
+Charge9 4.2
+Charge10 4.5
+Charge11 4.8
+Charge12 5.1
+Charge13 5.4
+Charge14 5.7
+Charge15 6.0
+Charge16 6.4
+Charge17 6.8
+Charge18 7.2
+Charge19 7.6
+Charge20 8.0
+
+攻擊效率	AAA	AAB	ABB	ACA	ACB	BBB	CBB	CCA	CCB	CCC
+一般相同	3.6	3.48	3.27	4.08	3.912	3.96	3.666	4.56	4.344	3.6
+一般不同	3	2.72	2.38	3.2	2.808	2.97	2.444	3.4	2.896	2.4
+競技相同	3.6	3.6	3.5	3.912	3.912	4.29	3.786	4.344	4.344	3.6
+競技不同	3	2.84	2.61	3.06	2.8584	3.3	2.6102	3.22	2.9608	2.4
+
+
+
+
+    case 2:
+    case 3:
+      v12 = (QbUtility *)62;
+      v11 = "command_blast";
+      goto LABEL_21;
+    case 4:
+      v12 = (QbUtility *)61;
+      v11 = "command_accele";
+    case 5:
+      v12 = (QbUtility *)63;
+      v11 = "command_charge";
+      goto LABEL_21;
+    case 7:
+      v10 = 13;
+      v11 = "command_magia";
+      goto LABEL_3;
+    case 8:
+      v10 = 14;
+      v11 = "command_doppel";
+    case 9:
+      v12 = (QbUtility *)-1;
+      v11 = "connect_cutin";
+      goto LABEL_21;
+
+8*
+
+const char *__fastcall QbUtility::getDiscName(int a1)
+{
+  const char *result; // r0@2
+
+  switch ( a1 )
+  {
+    case 1:
+      result = "Normal";
+      break;
+    case 2:
+      result = "BlastH";
+      break;
+    case 3:
+      result = "BlastV";
+      break;
+    case 4:
+      result = "Accele";
+      break;
+    case 5:
+      result = "Charge";
+      break;
+    default:
+      result = "(no disc)";
+      break;
+  }
+  return result;
+}

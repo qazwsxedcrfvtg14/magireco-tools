@@ -1,0 +1,178 @@
+.data.rel.ro:015B40B8                                         EXPORT _ZTVN7cocos2d13MenuItemImageE
+.data.rel.ro:015B40B8                         ; `vtable for'cocos2d::MenuItemImage
+.data.rel.ro:015B40B8 00                      _ZTVN7cocos2d13MenuItemImageE DCB    0  ; DATA XREF: cocos2d::MenuItemImage::create(void)+50o
+.data.rel.ro:015B40B8                                                                 ; cocos2d::MenuItemImage::create(std::string const&,std::string const&,std::string const&,std::function<void ()(cocos2d::Ref *)> const&)+70o ...
+.data.rel.ro:015B40B9 00                                      DCB    0
+.data.rel.ro:015B40BA 00                                      DCB    0
+.data.rel.ro:015B40BB 00                                      DCB    0
+.data.rel.ro:015B40BC F8 35 5B 01                             DCD _ZTIN7cocos2d13MenuItemImageE ; `typeinfo for'cocos2d::MenuItemImage
+.data.rel.ro:015B40C0 14 2F B2 00             off_15B40C0     DCD _ZN7cocos2d13MenuItemImageD2Ev ; cocos2d::MenuItemImage::~MenuItemImage()
+.data.rel.ro:015B40C4 3C 2F B2 00                             DCD _ZN7cocos2d13MenuItemImageD0Ev ; cocos2d::MenuItemImage::~MenuItemImage()
+.data.rel.ro:015B40C8 6C 2F B2 00                             DCD _ZNK7cocos2d8MenuItem14getDescriptionEv ; cocos2d::MenuItem::getDescription(void)
+.data.rel.ro:015B40CC EC 8F B2 00                             DCD _ZN7cocos2d4Node14setLocalZOrderEi ; cocos2d::Node::setLocalZOrder(int)
+.data.rel.ro:015B40D0 A5 A7 70 00                             DCD _ZN7cocos2d4Node9setZOrderEi+1
+.data.rel.ro:015B40D4 38 83 B2 00                             DCD _ZN7cocos2d4Node15_setLocalZOrderEi ; cocos2d::Node::_setLocalZOrder(int)
+.data.rel.ro:015B40D8 AD A7 70 00                             DCD _ZNK7cocos2d4Node14getLocalZOrderEv+1
+.data.rel.ro:015B40DC 35 AB 70 00                             DCD _ZNK7cocos2d4Node9getZOrderEv+1
+.data.rel.ro:015B40E0 F0 9E B2 00                             DCD _ZN7cocos2d4Node15setGlobalZOrderEf ; cocos2d::Node::setGlobalZOrder(float)
+.data.rel.ro:015B40E4 B5 A7 70 00                             DCD _ZNK7cocos2d4Node15getGlobalZOrderEv+1
+.data.rel.ro:015B40E8 F0 83 B2 00                             DCD _ZN7cocos2d4Node9setScaleXEf ; cocos2d::Node::setScaleX(float)
+.data.rel.ro:015B40EC A4 83 B2 00                             DCD _ZNK7cocos2d4Node9getScaleXEv ; cocos2d::Node::getScaleX(void)
+.data.rel.ro:015B40F0 50 84 B2 00                             DCD _ZN7cocos2d4Node9setScaleYEf ; cocos2d::Node::setScaleY(float)
+.data.rel.ro:015B40F4 18 84 B2 00                             DCD _ZNK7cocos2d4Node9getScaleYEv ; cocos2d::Node::getScaleY(void)
+.data.rel.ro:015B40F8 20 84 B2 00                             DCD _ZN7cocos2d4Node9setScaleZEf ; cocos2d::Node::setScaleZ(float)
+.data.rel.ro:015B40FC 48 84 B2 00                             DCD _ZNK7cocos2d4Node9getScaleZEv ; cocos2d::Node::getScaleZ(void)
+.data.rel.ro:015B4100 50 83 B2 00                             DCD _ZN7cocos2d4Node8setScaleEf ; cocos2d::Node::setScale(float)
+.data.rel.ro:015B4104 E8 8A B2 00                             DCD _ZNK7cocos2d4Node8getScaleEv ; cocos2d::Node::getScale(void)
+.data.rel.ro:015B4108 AC 83 B2 00                             DCD _ZN7cocos2d4Node8setScaleEff ; cocos2d::Node::setScale(float,float)
+.data.rel.ro:015B410C 80 84 B2 00                             DCD _ZN7cocos2d4Node11setPositionERKNS_4Vec2E ; cocos2d::Node::setPosition(cocos2d::Vec2 const&)
+.data.rel.ro:015B4110 14 9F B2 00                             DCD _ZN7cocos2d4Node21setNormalizedPositionERKNS_4Vec2E ; cocos2d::Node::setNormalizedPosition(cocos2d::Vec2 const&)
+.data.rel.ro:015B4114 78 84 B2 00                             DCD _ZNK7cocos2d4Node11getPositionEv ; cocos2d::Node::getPosition(void)
+.data.rel.ro:015B4118 5C 85 B2 00                             DCD _ZNK7cocos2d4Node21getNormalizedPositionEv ; cocos2d::Node::getNormalizedPosition(void)
+.data.rel.ro:015B411C AC 84 B2 00                             DCD _ZN7cocos2d4Node11setPositionEff ; cocos2d::Node::setPosition(float,float)
+.data.rel.ro:015B4120 98 84 B2 00                             DCD _ZNK7cocos2d4Node11getPositionEPfS1_ ; cocos2d::Node::getPosition(float *,float *)
+.data.rel.ro:015B4124 00 85 B2 00                             DCD _ZN7cocos2d4Node12setPositionXEf ; cocos2d::Node::setPositionX(float)
+.data.rel.ro:015B4128 F8 84 B2 00                             DCD _ZNK7cocos2d4Node12getPositionXEv ; cocos2d::Node::getPositionX(void)
+.data.rel.ro:015B412C 18 85 B2 00                             DCD _ZN7cocos2d4Node12setPositionYEf ; cocos2d::Node::setPositionY(float)
+.data.rel.ro:015B4130 10 85 B2 00                             DCD _ZNK7cocos2d4Node12getPositionYEv ; cocos2d::Node::getPositionY(void)
+.data.rel.ro:015B4134 48 A7 B2 00                             DCD _ZN7cocos2d4Node13setPosition3DERKNS_4Vec3E ; cocos2d::Node::setPosition3D(cocos2d::Vec3 const&)
+.data.rel.ro:015B4138 10 91 B2 00                             DCD _ZNK7cocos2d4Node13getPosition3DEv ; cocos2d::Node::getPosition3D(void)
+.data.rel.ro:015B413C 34 85 B2 00                             DCD _ZN7cocos2d4Node12setPositionZEf ; cocos2d::Node::setPositionZ(float)
+.data.rel.ro:015B4140 BD A7 70 00                             DCD _ZN7cocos2d4Node10setVertexZEf+1
+.data.rel.ro:015B4144 2C 85 B2 00                             DCD _ZNK7cocos2d4Node12getPositionZEv ; cocos2d::Node::getPositionZ(void)
+.data.rel.ro:015B4148 C5 A7 70 00                             DCD _ZNK7cocos2d4Node10getVertexZEv+1
+.data.rel.ro:015B414C E0 82 B2 00                             DCD _ZN7cocos2d4Node8setSkewXEf ; cocos2d::Node::setSkewX(float)
+.data.rel.ro:015B4150 D8 82 B2 00                             DCD _ZNK7cocos2d4Node8getSkewXEv ; cocos2d::Node::getSkewX(void)
+.data.rel.ro:015B4154 10 83 B2 00                             DCD _ZN7cocos2d4Node8setSkewYEf ; cocos2d::Node::setSkewY(float)
+.data.rel.ro:015B4158 08 83 B2 00                             DCD _ZNK7cocos2d4Node8getSkewYEv ; cocos2d::Node::getSkewY(void)
+.data.rel.ro:015B415C 58 9F B2 00                             DCD _ZN7cocos2d4Node14setAnchorPointERKNS_4Vec2E ; cocos2d::Node::setAnchorPoint(cocos2d::Vec2 const&)
+.data.rel.ro:015B4160 B0 85 B2 00                             DCD _ZNK7cocos2d4Node14getAnchorPointEv ; cocos2d::Node::getAnchorPoint(void)
+.data.rel.ro:015B4164 A8 85 B2 00                             DCD _ZNK7cocos2d4Node22getAnchorPointInPointsEv ; cocos2d::Node::getAnchorPointInPoints(void)
+.data.rel.ro:015B4168 4C 91 B2 00                             DCD _ZN7cocos2d4Node14setContentSizeERKNS_4SizeE ; cocos2d::Node::setContentSize(cocos2d::Size const&)
+.data.rel.ro:015B416C B8 85 B2 00                             DCD _ZNK7cocos2d4Node14getContentSizeEv ; cocos2d::Node::getContentSize(void)
+.data.rel.ro:015B4170 80 85 B2 00                             DCD _ZN7cocos2d4Node10setVisibleEb ; cocos2d::Node::setVisible(bool)
+.data.rel.ro:015B4174 78 85 B2 00                             DCD _ZNK7cocos2d4Node9isVisibleEv ; cocos2d::Node::isVisible(void)
+.data.rel.ro:015B4178 0C AF B2 00                             DCD _ZN7cocos2d4Node11setRotationEf ; cocos2d::Node::setRotation(float)
+.data.rel.ro:015B417C 24 8A B2 00                             DCD _ZNK7cocos2d4Node11getRotationEv ; cocos2d::Node::getRotation(void)
+.data.rel.ro:015B4180 40 AF B2 00                             DCD _ZN7cocos2d4Node13setRotation3DERKNS_4Vec3E ; cocos2d::Node::setRotation3D(cocos2d::Vec3 const&)
+.data.rel.ro:015B4184 34 90 B2 00                             DCD _ZNK7cocos2d4Node13getRotation3DEv ; cocos2d::Node::getRotation3D(void)
+.data.rel.ro:015B4188 F8 B0 B2 00                             DCD _ZN7cocos2d4Node15setRotationQuatERKNS_10QuaternionE ; cocos2d::Node::setRotationQuat(cocos2d::Quaternion const&)
+.data.rel.ro:015B418C 34 91 B2 00                             DCD _ZNK7cocos2d4Node15getRotationQuatEv ; cocos2d::Node::getRotationQuat(void)
+.data.rel.ro:015B4190 B0 AF B2 00                             DCD _ZN7cocos2d4Node16setRotationSkewXEf ; cocos2d::Node::setRotationSkewX(float)
+.data.rel.ro:015B4194 CD A7 70 00                             DCD _ZN7cocos2d4Node12setRotationXEf+1
+.data.rel.ro:015B4198 40 83 B2 00                             DCD _ZNK7cocos2d4Node16getRotationSkewXEv ; cocos2d::Node::getRotationSkewX(void)
+.data.rel.ro:015B419C D5 A7 70 00                             DCD _ZNK7cocos2d4Node12getRotationXEv+1
+.data.rel.ro:015B41A0 E0 AF B2 00                             DCD _ZN7cocos2d4Node16setRotationSkewYEf ; cocos2d::Node::setRotationSkewY(float)
+.data.rel.ro:015B41A4 DD A7 70 00                             DCD _ZN7cocos2d4Node12setRotationYEf+1
+.data.rel.ro:015B41A8 48 83 B2 00                             DCD _ZNK7cocos2d4Node16getRotationSkewYEv ; cocos2d::Node::getRotationSkewY(void)
+.data.rel.ro:015B41AC E5 A7 70 00                             DCD _ZNK7cocos2d4Node12getRotationYEv+1
+.data.rel.ro:015B41B0 E8 85 B2 00                             DCD _ZN7cocos2d4Node28ignoreAnchorPointForPositionEb ; cocos2d::Node::ignoreAnchorPointForPosition(bool)
+.data.rel.ro:015B41B4 E0 85 B2 00                             DCD _ZNK7cocos2d4Node30isIgnoreAnchorPointForPositionEv ; cocos2d::Node::isIgnoreAnchorPointForPosition(void)
+.data.rel.ro:015B41B8 6C 8C B2 00                             DCD _ZN7cocos2d4Node8addChildEPS0_ ; cocos2d::Node::addChild(cocos2d::Node*)
+.data.rel.ro:015B41BC B0 8B B2 00                             DCD _ZN7cocos2d4Node8addChildEPS0_i ; cocos2d::Node::addChild(cocos2d::Node*,int)
+.data.rel.ro:015B41C0 78 BA B2 00                             DCD _ZN7cocos2d4Node8addChildEPS0_ii ; cocos2d::Node::addChild(cocos2d::Node*,int,int)
+.data.rel.ro:015B41C4 A0 BC B2 00                             DCD _ZN7cocos2d4Node8addChildEPS0_iRKSs ; cocos2d::Node::addChild(cocos2d::Node*,int,std::string const&)
+.data.rel.ro:015B41C8 F4 8E B2 00                             DCD _ZNK7cocos2d4Node13getChildByTagEi ; cocos2d::Node::getChildByTag(int)
+.data.rel.ro:015B41CC C0 A7 B2 00                             DCD _ZNK7cocos2d4Node14getChildByNameERKSs ; cocos2d::Node::getChildByName(std::string const&)
+.data.rel.ro:015B41D0 10 26 B3 00                             DCD _ZNK7cocos2d4Node17enumerateChildrenERKSsSt8functionIFbPS0_EE ; cocos2d::Node::enumerateChildren(std::string const&,std::function<bool ()(cocos2d::Node*)>)
+.data.rel.ro:015B41D4 39 82 70 00                             DCD _ZN7cocos2d4Node11getChildrenEv+1
+.data.rel.ro:015B41D8 ED A7 70 00                             DCD _ZNK7cocos2d4Node11getChildrenEv+1
+.data.rel.ro:015B41DC 64 85 B2 00                             DCD _ZNK7cocos2d4Node16getChildrenCountEv ; cocos2d::Node::getChildrenCount(void)
+.data.rel.ro:015B41E0 C8 85 B2 00                             DCD _ZN7cocos2d4Node9setParentEPS0_ ; cocos2d::Node::setParent(cocos2d::Node*)
+.data.rel.ro:015B41E4 F5 A7 70 00                             DCD _ZN7cocos2d4Node9getParentEv+1
+.data.rel.ro:015B41E8 FD A7 70 00                             DCD _ZNK7cocos2d4Node9getParentEv+1
+.data.rel.ro:015B41EC 28 86 B2 00                             DCD _ZN7cocos2d4Node16removeFromParentEv ; cocos2d::Node::removeFromParent(void)
+.data.rel.ro:015B41F0 38 86 B2 00                             DCD _ZN7cocos2d4Node26removeFromParentAndCleanupEb ; cocos2d::Node::removeFromParentAndCleanup(bool)
+.data.rel.ro:015B41F4 DC B5 B2 00                             DCD _ZN7cocos2d4Node11removeChildEPS0_b ; cocos2d::Node::removeChild(cocos2d::Node*,bool)
+.data.rel.ro:015B41F8 24 8D B2 00                             DCD _ZN7cocos2d4Node16removeChildByTagEib ; cocos2d::Node::removeChildByTag(int,bool)
+.data.rel.ro:015B41FC 00 8E B2 00                             DCD _ZN7cocos2d4Node17removeChildByNameERKSsb ; cocos2d::Node::removeChildByName(std::string const&,bool)
+.data.rel.ro:015B4200 5C 86 B2 00                             DCD _ZN7cocos2d4Node17removeAllChildrenEv ; cocos2d::Node::removeAllChildren(void)
+.data.rel.ro:015B4204 E4 A5 B2 00                             DCD _ZN7cocos2d4Node28removeAllChildrenWithCleanupEb ; cocos2d::Node::removeAllChildrenWithCleanup(bool)
+.data.rel.ro:015B4208 B8 B2 B2 00                             DCD _ZN7cocos2d4Node12reorderChildEPS0_i ; cocos2d::Node::reorderChild(cocos2d::Node*,int)
+.data.rel.ro:015B420C 68 DA B2 00                             DCD _ZN7cocos2d4Node15sortAllChildrenEv ; cocos2d::Node::sortAllChildren(void)
+.data.rel.ro:015B4210 08 86 B2 00                             DCD _ZNK7cocos2d4Node6getTagEv ; cocos2d::Node::getTag(void)
+.data.rel.ro:015B4214 10 86 B2 00                             DCD _ZN7cocos2d4Node6setTagEi ; cocos2d::Node::setTag(int)
+.data.rel.ro:015B4218 18 86 B2 00                             DCD _ZNK7cocos2d4Node7getNameEv ; cocos2d::Node::getName(void)
+.data.rel.ro:015B421C B4 91 B2 00                             DCD _ZN7cocos2d4Node7setNameERKSs ; cocos2d::Node::setName(std::string const&)
+.data.rel.ro:015B4220 05 A8 70 00                             DCD _ZN7cocos2d4Node11getUserDataEv+1
+.data.rel.ro:015B4224 0D A8 70 00                             DCD _ZNK7cocos2d4Node11getUserDataEv+1
+.data.rel.ro:015B4228 20 86 B2 00                             DCD _ZN7cocos2d4Node11setUserDataEPv ; cocos2d::Node::setUserData(void *)
+.data.rel.ro:015B422C 15 A8 70 00                             DCD _ZN7cocos2d4Node13getUserObjectEv+1
+.data.rel.ro:015B4230 1D A8 70 00                             DCD _ZNK7cocos2d4Node13getUserObjectEv+1
+.data.rel.ro:015B4234 A8 89 B2 00                             DCD _ZN7cocos2d4Node13setUserObjectEPNS_3RefE ; cocos2d::Node::setUserObject(cocos2d::Ref *)
+.data.rel.ro:015B4238 B8 9F B2 00                             DCD _ZN7cocos2d4Node12setGLProgramEPNS_9GLProgramE ; cocos2d::Node::setGLProgram(cocos2d::GLProgram *)
+.data.rel.ro:015B423C E4 91 B2 00                             DCD _ZN7cocos2d4Node17setGLProgramStateEPNS_14GLProgramStateE ; cocos2d::Node::setGLProgramState(cocos2d::GLProgramState *)
+.data.rel.ro:015B4240 C0 85 B2 00                             DCD _ZNK7cocos2d4Node9isRunningEv ; cocos2d::Node::isRunning(void)
+.data.rel.ro:015B4244 4C 94 B2 00                             DCD _ZN7cocos2d4Node7onEnterEv ; cocos2d::Node::onEnter(void)
+.data.rel.ro:015B4248 04 93 B2 00                             DCD _ZN7cocos2d4Node26onEnterTransitionDidFinishEv ; cocos2d::Node::onEnterTransitionDidFinish(void)
+.data.rel.ro:015B424C 10 95 B2 00                             DCD _ZN7cocos2d4Node6onExitEv ; cocos2d::Node::onExit(void)
+.data.rel.ro:015B4250 8C 93 B2 00                             DCD _ZN7cocos2d4Node24onExitTransitionDidStartEv ; cocos2d::Node::onExitTransitionDidStart(void)
+.data.rel.ro:015B4254 68 CB B2 00                             DCD _ZN7cocos2d4Node7cleanupEv ; cocos2d::Node::cleanup(void)
+.data.rel.ro:015B4258 6C 86 B2 00                             DCD _ZN7cocos2d4Node4drawEPNS_8RendererERKNS_4Mat4Ej ; cocos2d::Node::draw(cocos2d::Renderer *,cocos2d::Mat4 const&,uint)
+.data.rel.ro:015B425C 04 A2 B2 00                             DCD _ZN7cocos2d4Node4drawEv ; cocos2d::Node::draw(void)
+.data.rel.ro:015B4260 68 C0 B2 00                             DCD _ZN7cocos2d4Node5visitEPNS_8RendererERKNS_4Mat4Ej ; cocos2d::Node::visit(cocos2d::Renderer *,cocos2d::Mat4 const&,uint)
+.data.rel.ro:015B4264 10 94 B2 00                             DCD _ZN7cocos2d4Node5visitEv ; cocos2d::Node::visit(void)
+.data.rel.ro:015B4268 38 92 B2 00                             DCD _ZNK7cocos2d4Node8getSceneEv ; cocos2d::Node::getScene(void)
+.data.rel.ro:015B426C 78 92 B2 00                             DCD _ZNK7cocos2d4Node14getBoundingBoxEv ; cocos2d::Node::getBoundingBox(void)
+.data.rel.ro:015B4270 25 A8 70 00                             DCD _ZNK7cocos2d4Node11boundingBoxEv+1
+.data.rel.ro:015B4274 D8 89 B2 00                             DCD _ZN7cocos2d4Node18setEventDispatcherEPNS_15EventDispatcherE ; cocos2d::Node::setEventDispatcher(cocos2d::EventDispatcher *)
+.data.rel.ro:015B4278 35 A8 70 00                             DCD _ZNK7cocos2d4Node18getEventDispatcherEv+1
+.data.rel.ro:015B427C 44 C2 B2 00                             DCD _ZN7cocos2d4Node16setActionManagerEPNS_13ActionManagerE ; cocos2d::Node::setActionManager(cocos2d::ActionManager *)
+.data.rel.ro:015B4280 3D A8 70 00                             DCD _ZN7cocos2d4Node16getActionManagerEv+1
+.data.rel.ro:015B4284 45 A8 70 00                             DCD _ZNK7cocos2d4Node16getActionManagerEv+1
+.data.rel.ro:015B4288 C8 95 B2 00                             DCD _ZN7cocos2d4Node9runActionEPNS_6ActionE ; cocos2d::Node::runAction(cocos2d::Action *)
+.data.rel.ro:015B428C 24 CB B2 00                             DCD _ZN7cocos2d4Node12setSchedulerEPNS_9SchedulerE ; cocos2d::Node::setScheduler(cocos2d::Scheduler *)
+.data.rel.ro:015B4290 4D A8 70 00                             DCD _ZN7cocos2d4Node12getSchedulerEv+1
+.data.rel.ro:015B4294 55 A8 70 00                             DCD _ZNK7cocos2d4Node12getSchedulerEv+1
+.data.rel.ro:015B4298 80 96 B2 00                             DCD _ZN7cocos2d4Node6resumeEv ; cocos2d::Node::resume(void)
+.data.rel.ro:015B429C B4 96 B2 00                             DCD _ZN7cocos2d4Node5pauseEv ; cocos2d::Node::pause(void)
+.data.rel.ro:015B42A0 E8 96 B2 00                             DCD _ZN7cocos2d4Node6updateEf ; cocos2d::Node::update(float)
+.data.rel.ro:015B42A4 F4 86 B2 00                             DCD _ZN7cocos2d4Node15updateTransformEv ; cocos2d::Node::updateTransform(void)
+.data.rel.ro:015B42A8 E4 97 B2 00                             DCD _ZNK7cocos2d4Node24getNodeToParentTransformEv ; cocos2d::Node::getNodeToParentTransform(void)
+.data.rel.ro:015B42AC 94 97 B2 00                             DCD _ZNK7cocos2d4Node30getNodeToParentAffineTransformEv ; cocos2d::Node::getNodeToParentAffineTransform(void)
+.data.rel.ro:015B42B0 34 A2 B2 00                             DCD _ZNK7cocos2d4Node24getNodeToParentTransformEPS0_ ; cocos2d::Node::getNodeToParentTransform(cocos2d::Node*)
+.data.rel.ro:015B42B4 58 A3 B2 00                             DCD _ZNK7cocos2d4Node30getNodeToParentAffineTransformEPS0_ ; cocos2d::Node::getNodeToParentAffineTransform(cocos2d::Node*)
+.data.rel.ro:015B42B8 70 86 B2 00                             DCD _ZN7cocos2d4Node24setNodeToParentTransformERKNS_4Mat4E ; cocos2d::Node::setNodeToParentTransform(cocos2d::Mat4 const&)
+.data.rel.ro:015B42BC 5D A8 70 00                             DCD _ZNK7cocos2d4Node21nodeToParentTransformEv+1
+.data.rel.ro:015B42C0 A0 9C B2 00                             DCD _ZNK7cocos2d4Node24getParentToNodeTransformEv ; cocos2d::Node::getParentToNodeTransform(void)
+.data.rel.ro:015B42C4 BC 97 B2 00                             DCD _ZNK7cocos2d4Node30getParentToNodeAffineTransformEv ; cocos2d::Node::getParentToNodeAffineTransform(void)
+.data.rel.ro:015B42C8 6D A8 70 00                             DCD _ZNK7cocos2d4Node21parentToNodeTransformEv+1
+.data.rel.ro:015B42CC D4 86 B2 00                             DCD _ZNK7cocos2d4Node23getNodeToWorldTransformEv ; cocos2d::Node::getNodeToWorldTransform(void)
+.data.rel.ro:015B42D0 B4 86 B2 00                             DCD _ZNK7cocos2d4Node29getNodeToWorldAffineTransformEv ; cocos2d::Node::getNodeToWorldAffineTransform(void)
+.data.rel.ro:015B42D4 7D A8 70 00                             DCD _ZNK7cocos2d4Node20nodeToWorldTransformEv+1
+.data.rel.ro:015B42D8 48 9D B2 00                             DCD _ZNK7cocos2d4Node23getWorldToNodeTransformEv ; cocos2d::Node::getWorldToNodeTransform(void)
+.data.rel.ro:015B42DC BC 9D B2 00                             DCD _ZNK7cocos2d4Node29getWorldToNodeAffineTransformEv ; cocos2d::Node::getWorldToNodeAffineTransform(void)
+.data.rel.ro:015B42E0 8D A8 70 00                             DCD _ZNK7cocos2d4Node20worldToNodeTransformEv+1
+.data.rel.ro:015B42E4 F0 C5 B2 00                             DCD _ZN7cocos2d4Node12addComponentEPNS_9ComponentE ; cocos2d::Node::addComponent(cocos2d::Component *)
+.data.rel.ro:015B42E8 1C 9E B2 00                             DCD _ZN7cocos2d4Node15removeComponentERKSs ; cocos2d::Node::removeComponent(std::string const&)
+.data.rel.ro:015B42EC 2C 9E B2 00                             DCD _ZN7cocos2d4Node15removeComponentEPNS_9ComponentE ; cocos2d::Node::removeComponent(cocos2d::Component *)
+.data.rel.ro:015B42F0 3C 9E B2 00                             DCD _ZN7cocos2d4Node19removeAllComponentsEv ; cocos2d::Node::removeAllComponents(void)
+.data.rel.ro:015B42F4 24 87 B2 00                             DCD _ZNK7cocos2d4Node10getOpacityEv ; cocos2d::Node::getOpacity(void)
+.data.rel.ro:015B42F8 38 87 B2 00                             DCD _ZNK7cocos2d4Node19getDisplayedOpacityEv ; cocos2d::Node::getDisplayedOpacity(void)
+.data.rel.ro:015B42FC 4C 87 B2 00                             DCD _ZN7cocos2d4Node10setOpacityEh ; cocos2d::Node::setOpacity(uchar)
+.data.rel.ro:015B4300 40 A4 B2 00                             DCD _ZN7cocos2d4Node22updateDisplayedOpacityEh ; cocos2d::Node::updateDisplayedOpacity(uchar)
+.data.rel.ro:015B4304 6C 87 B2 00                             DCD _ZNK7cocos2d4Node23isCascadeOpacityEnabledEv ; cocos2d::Node::isCascadeOpacityEnabled(void)
+.data.rel.ro:015B4308 4C 9E B2 00                             DCD _ZN7cocos2d4Node24setCascadeOpacityEnabledEb ; cocos2d::Node::setCascadeOpacityEnabled(bool)
+.data.rel.ro:015B430C 14 88 B2 00                             DCD _ZNK7cocos2d4Node8getColorEv ; cocos2d::Node::getColor(void)
+.data.rel.ro:015B4310 2C 88 B2 00                             DCD _ZNK7cocos2d4Node17getDisplayedColorEv ; cocos2d::Node::getDisplayedColor(void)
+.data.rel.ro:015B4314 44 88 B2 00                             DCD _ZN7cocos2d4Node8setColorERKNS_7Color3BE ; cocos2d::Node::setColor(cocos2d::Color3B const&)
+.data.rel.ro:015B4318 E8 A4 B2 00                             DCD _ZN7cocos2d4Node20updateDisplayedColorERKNS_7Color3BE ; cocos2d::Node::updateDisplayedColor(cocos2d::Color3B const&)
+.data.rel.ro:015B431C 8C 88 B2 00                             DCD _ZNK7cocos2d4Node21isCascadeColorEnabledEv ; cocos2d::Node::isCascadeColorEnabled(void)
+.data.rel.ro:015B4320 84 9E B2 00                             DCD _ZN7cocos2d4Node22setCascadeColorEnabledEb ; cocos2d::Node::setCascadeColorEnabled(bool)
+.data.rel.ro:015B4324 9D A8 70 00                             DCD _ZN7cocos2d4Node19setOpacityModifyRGBEb+1
+.data.rel.ro:015B4328 A1 A8 70 00                             DCD _ZNK7cocos2d4Node18isOpacityModifyRGBEv+1
+.data.rel.ro:015B432C 00 A0 B2 00                             DCD _ZN7cocos2d4Node13setCameraMaskEtb ; cocos2d::Node::setCameraMask(ushort,bool)
+.data.rel.ro:015B4330 0C 4C B2 00                             DCD _ZN7cocos2d13MenuItemImage4initEv ; cocos2d::MenuItemImage::init(void)
+.data.rel.ro:015B4334 80 87 B2 00                             DCD _ZN7cocos2d4Node20updateCascadeOpacityEv ; cocos2d::Node::updateCascadeOpacity(void)
+.data.rel.ro:015B4338 D8 87 B2 00                             DCD _ZN7cocos2d4Node21disableCascadeOpacityEv ; cocos2d::Node::disableCascadeOpacity(void)
+.data.rel.ro:015B433C A0 88 B2 00                             DCD _ZN7cocos2d4Node18updateCascadeColorEv ; cocos2d::Node::updateCascadeColor(void)
+.data.rel.ro:015B4340 54 89 B2 00                             DCD _ZN7cocos2d4Node19disableCascadeColorEv ; cocos2d::Node::disableCascadeColor(void)
+.data.rel.ro:015B4344 A5 A8 70 00                             DCD _ZN7cocos2d4Node11updateColorEv+1
+.data.rel.ro:015B4348 C4 32 B2 00                             DCD _ZN7cocos2d8MenuItem8activateEv ; cocos2d::MenuItem::activate(void)
+.data.rel.ro:015B434C 30 30 B2 00                             DCD _ZN7cocos2d14MenuItemSprite8selectedEv ; cocos2d::MenuItemSprite::selected(void)
+.data.rel.ro:015B4350 58 2D B2 00                             DCD _ZN7cocos2d14MenuItemSprite10unselectedEv ; cocos2d::MenuItemSprite::unselected(void)
+.data.rel.ro:015B4354 C4 2C B2 00                             DCD _ZNK7cocos2d8MenuItem9isEnabledEv ; cocos2d::MenuItem::isEnabled(void)
+.data.rel.ro:015B4358 B0 30 B2 00                             DCD _ZN7cocos2d14MenuItemSprite10setEnabledEb ; cocos2d::MenuItemSprite::setEnabled(bool)
+.data.rel.ro:015B435C CC 2C B2 00                             DCD _ZNK7cocos2d8MenuItem10isSelectedEv ; cocos2d::MenuItem::isSelected(void)
+.data.rel.ro:015B4360 DC 30 B2 00                             DCD _ZN7cocos2d14MenuItemSprite22updateImagesVisibilityEv ; cocos2d::MenuItemSprite::updateImagesVisibility(void)
+.data.rel.ro:015B4364 00 00 00 00                             ALIGN 8
