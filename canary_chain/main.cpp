@@ -1,3 +1,5 @@
+#pragma GCC optimize("O3","unroll-loops","omit-frame-pointer","inline","no-stack-protector")
+#pragma GCC target "tune=native"
 #include<bits/stdc++.h>
 #define f first
 #define s second
@@ -68,7 +70,7 @@ void show_disas(int x){
 int canery_pos=0;
 int find_mp(string s){
     int x=upper_bound(mp[s].begin(),mp[s].end(),canery_pos)-mp[s].begin();
-    if(x==mp[s].size())return 0x7fffffff;
+    if(x==(int)mp[s].size())return 0x7fffffff;
     return mp[s][x];
     }
 int check_pop(int now){
@@ -213,7 +215,7 @@ int main(int argc,char** argv){
         result=argv[3];
     sorg=FileToStr(org);
     init(dis);
-    printf("instructions: %d\n",disas.size());
+    printf("instructions: %d\n",(int)disas.size());
     printf("inited!\n");
     while(true){
         string cmd;
@@ -257,7 +259,7 @@ int main(int argc,char** argv){
             getline(cin,input);
             getline(cin,input);
             string s=get_hex_res(input);
-            for(int i=0;i<s.length();i++)
+            for(int i=0;i<(int)s.length();i++)
                 sorg[ps++]=s[i];
             }
         else if(cmd=="c"){
@@ -278,37 +280,57 @@ int main(int argc,char** argv){
             vector<par>jp_list;
             //jp_list.push_back(par(ps+get_hex_res(disas[ps][1]).length(),ps));
             jp_list.push_back(par(ps+2,ps));
+            pr pos=pr(-1,par(-1,-1));
+            bool new_input=true;
             while(true){
                 int old_cannery=canery_pos;
-                pr pos;
-                if(jp_list.size()==1&&reserve.size())
-                    pos=reserve.front(),reserve.pop_front();
-                else
-                    pos=find_canery(ps);
-                if(pos.s.f-pos.f-4<=0)continue;
-                printf("block size: %d\n",pos.s.f-pos.f-4);
-                getline(cin,input);
+                bool push=false;
+                //printf("~~%x %x %x\n",pos.f,pos.s.f,pos.s.s);
+                if(pos.f==-1){
+                    if(jp_list.size()==1&&reserve.size())
+                        pos=reserve.front(),reserve.pop_front();
+                    else
+                        pos=find_canery(ps);
+                    push=true;
+                    }
+                if(pos.s.f-pos.f-4<=0){
+                    pos=pr(-1,par(-1,-1));
+                    continue;
+                    }
+                printf("block size: %d (%d)\n",pos.s.f-pos.f-4,push);
+                if(new_input)
+                    getline(cin,input);
                 if(input=="done"){
                     canery_pos=old_cannery;
                     break;
                     }
                 if(input=="")continue;
                 string s=get_hex_res(input);
-                if(s.length()>pos.s.f-pos.f-4){
-                    puts("too long!");
+                printf("now block: %d\n",(int)s.length());
+                if((int)s.length()>pos.s.f-pos.f-4){
+                    //puts("too long!");
+                    pos=pr(-1,par(-1,-1));
+                    new_input=false;
                     continue;
                     }
+                new_input=true;
                 int p=pos.f;
                 for(int i=pos.s.f;i<pos.s.s;i++,p++)
                     sorg[p]=sorg[i];
                 int p2=p;
-                for(int i=0;i<s.length();i++)
+                for(int i=0;i<(int)s.length();i++)
                     sorg[p++]=s[i];
-                jp_list.push_back(par(p2,p));
-                for(;p<pos.s.s;p+=2)
-                    sorg[p]=0x00,sorg[p+1]=0xbf;
+                pos.f=p;
+                if(push){
+                    jp_list.push_back(par(p2,p));
+                    for(;p<pos.s.s;p+=2)
+                        sorg[p]=0x00,sorg[p+1]=0xbf;
+                    }
+                else
+                    jp_list.back().s=p;
+                pos.s.f=pos.s.s;
                 }
-            for(int i=0;i<jp_list.size();i++){
+            for(int i=0;i<(int)jp_list.size();i++){
                 int nw=jp_list[i].s;
                 int nx=jp_list[(i+1)%jp_list.size()].f;
                 printf("%x %x\n",nw,nx);
@@ -319,13 +341,23 @@ int main(int argc,char** argv){
                         sorg[nw+1]=((d>>8)&0x7)|0xE0;
                         }
                     else{
-                        d=(nw-nx-4);
+                        d=(nx-nw-4);
+                        d=d/2;
+                        d=d&0xFFFFF;
+                        int d1=d&0xFF;
+                        d>>=8;
+                        d*=2;
+                        sorg[nw]=(d>>4);
+                        sorg[nw+1]=0xf0;
+                        sorg[nw+2]=d1&0xff;
+                        sorg[nw+3]=((d/2)&0xF)|0xB8;
+                        /*
                         int dd=d&0xFFF;
                         dd/=2;
                         sorg[nw]=dd>>8;
                         sorg[nw+1]=0xF0;
                         sorg[nw+2]=dd&0xFF;
-                        sorg[nw+3]=(dd>>8)|0xB8;
+                        sorg[nw+3]=(dd>>8)|0xB8;*/
                         //puts("Error!");
                         }
                     }
@@ -337,15 +369,21 @@ int main(int argc,char** argv){
                         sorg[nw+1]=((d>>8)&0x7)|0xE0;
                         }
                     else{
-                        //d=(nw-nx+2);
+                        d=(nw-nx+2);
                         //d=0x7fffffff-d;//7fff f119
 
                         //int dd=d&0xFFF;
-                        d=0xFFF-d-1;
-                        sorg[nw]=0xff;
+                        d=d/2-2;
+                        d=0xFFFFFF-d;
+                        d=d&0xFFFFF;
+                        d-=2;
+                        int d1=d&0xFF;
+                        d>>=8;
+                        d*=2;
+                        sorg[nw]=(d>>4);
                         sorg[nw+1]=0xf7;
-                        sorg[nw+2]=d&0xff;
-                        sorg[nw+3]=(d>>8)|0xB0;
+                        sorg[nw+2]=d1&0xff;
+                        sorg[nw+3]=((d/2)&0xF)|0xB8;
 
                         }
                     }
